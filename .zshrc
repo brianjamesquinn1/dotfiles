@@ -2,7 +2,9 @@
 alias pro='git config --global user.name "brian Quinn" && git config --global user.email "brianjamesquinn1@gmail.com"'
 
 # Z-shell settings
+export ZSH=/Users/$USER/.oh-my-zsh
 ZSH_THEME="sporty_256"
+source $ZSH/oh-my-zsh.sh
 
 # The following lines were added by compinstall
 
