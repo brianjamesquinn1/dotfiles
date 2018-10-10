@@ -16,5 +16,8 @@ brew install zsh
 command -v zsh | sudo tee -a /etc/shells
 chsh -s $(command -v zsh)
 
+# Install Oh-My-Zsh Z-shell Configuration Manager
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Configure Z-shell
 cp .zshrc ~/.zshrc
