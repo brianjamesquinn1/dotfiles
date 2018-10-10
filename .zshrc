@@ -1,5 +1,10 @@
 # Aliases
-alias pro='git config --global user.name "brian Quinn" && git config --global user.email "brianjamesquinn1@gmail.com"'
+alias pro='git config --global user.name "Brian Quinn" && git config --global user.email "brianjamesquinn1@gmail.com"'
+alias ws='cd $HOME/Projects'
+alias workspace='cd $HOME/Projects'
+
+# Environment Variables
+export GOPATH=$HOME/Projects/go
 
 # Z-shell settings
 export ZSH=/Users/$USER/.oh-my-zsh
