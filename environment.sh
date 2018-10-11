@@ -32,4 +32,4 @@ brew install python
 
 # Install Go
 brew install go
-sudo mkdir $WORKSPACE/go
+sudo mkdir -p $WORKSPACE/go

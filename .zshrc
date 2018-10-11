@@ -8,6 +8,13 @@ export GOPATH=$HOME/Projects/go
 
 # Z-shell settings
 export ZSH=/Users/$USER/.oh-my-zsh
+#ZSH_THEME="jnrowe"
+#ZSH_THEME="miloshadzic"
+#ZSH_THEME="mrtazz"
+#ZSH_THEME="nicoulaj"
+#ZSH_THEME="pygmalion"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="skaro"
 ZSH_THEME="sporty_256"
 source $ZSH/oh-my-zsh.sh
 
