@@ -11,3 +11,10 @@ set tabstop=2
 
 " Visual "
 set number
+
+" Colors "
+highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
+highlight DiffDelete cterm=none ctermfg=160  ctermbg=none
+highlight DiffChange cterm=none ctermfg=none ctermbg=none
+highlight DiffText   cterm=none ctermfg=220  ctermbg=240
+

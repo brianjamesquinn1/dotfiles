@@ -14,6 +14,11 @@ git config --global user.email "brianjamesquinn1@gmail.com"
 brew install vim
 
 # Configure Vim
+git config --global diff.tool vimdiff
+git config --global difftool.prompt true
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
+git config --global mergetool.prompt false
 cp .vimrc ~/.vimrc
 
 # Replace Bash with Z-shell
