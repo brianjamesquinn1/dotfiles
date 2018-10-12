@@ -34,6 +34,7 @@ cp .zshrc ~/.zshrc
 
 # Install Python
 brew install python
+sudo easy_install pip
 
 # Install Go
 brew install go
