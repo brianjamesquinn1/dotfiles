@@ -10,6 +10,9 @@ git config --global user.email "brianjamesquinn1@gmail.com"
 # Download Homebrew Package Manager
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Install Mac Developer Tools
+xcode-select --install
+
 # Install Vim
 brew install vim
 
