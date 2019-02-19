@@ -1,5 +1,5 @@
 # Aliases
-alias pro='git config --global user.name "Brian Quinn" && git config --global user.email "brianjamesquinn1@gmail.com"'
+alias pro='git config --global user.name "Brian Quinn" && git config --global user.email "brianjamesquinn1@gmail.com" && cp ~/.ssh/id_rsa_pro.pub ~/.ssh/id_rsa.pub && cp ~/.ssh/id_rsa_pro ~/.ssh/id_rsa'
 alias ws='cd $HOME/Projects'
 alias workspace='cd $HOME/Projects'
 
