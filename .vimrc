@@ -3,13 +3,14 @@ syntax on
 " Characters "
 set backspace=indent,eol,start
 
-" Tabs "
+" Spacing "
 set autoindent
 set expandtab
 set shiftwidth=2
 set tabstop=2
 
 " Visual "
+set background=dark
 set number
 
 " Colors "
