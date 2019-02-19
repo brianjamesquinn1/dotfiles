@@ -6,6 +6,10 @@ alias workspace='cd $HOME/Projects'
 # Environment Variables
 export GOPATH=$HOME/Projects/go
 
+# Custom Bindings
+bindkey '^[OA' history-beginning-search-backward
+bindkey '^[OB' history-beginning-search-forward
+
 # Z-shell settings
 export ZSH=/Users/$USER/.oh-my-zsh
 #ZSH_THEME="jnrowe"
