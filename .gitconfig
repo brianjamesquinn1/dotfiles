@@ -1,0 +1,14 @@
+[user]
+	name = Brian Quinn
+	email = brianjamesquinn1@gmail.com
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = true
+[mergetool]
+	prompt = true
+[pull]
+	rebase = true
