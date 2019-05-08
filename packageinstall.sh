@@ -16,6 +16,9 @@ command -v zsh | sudo tee -a /etc/shells
 # Install Oh-My-Zsh Z-shell Configuration Manager
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Install tmux
+brew install tmux
+
 # Install Python
 brew install python
 sudo easy_install pip
