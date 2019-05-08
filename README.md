@@ -1,26 +1,30 @@
+### Installation & Environment Setup ###
+1. Run `./environment.sh`, this will install/setup anything that can be automated
+   - an overview of each script can be found at the bottom
+2. `environment.sh` will output the public ssh and gpg keys, add these to github
+3. Follow instructions below to configure manual settings
+
 ### Setting Up Laptop Preferences ###
-1. Download Spectacle
-2. Download Flux
+1. Configure Flux
    - Set `Daytime` to 5500K (Sunlight)
    - Set `Sunset` to 3400K (Halogen)
    - Set `Bedtime` to 1900K (Candle)
    - Set 6:00 AM as the wakeup time
    - Check `OS X Dark theme at sunset`
    - Check `Dim on disable`
-   - Uncheck `Notifications from f.lux website`
-3. `System Preferences>Keyboard>Keyboard`
+2. `System Preferences>Keyboard>Keyboard`
    - Set `Key Repeat` to the fastest setting
    - Set `Delay Until Repeat` to the shortest setting
-4. `System Preferences>Keyboard>Keyboard>Modifier Keys...`
+3. `System Preferences>Keyboard>Keyboard>Modifier Keys...`
    - Set `Caps Lock Key` to `Escape`
-5. `System Preferences>Keyboard>Shortcuts>Mission Control`
+4. `System Preferences>Keyboard>Shortcuts>Mission Control`
    - Set `Move left a space` to opt-left
    - Set `Move right a space` to opt-right
-6. `System Preferences>Mission Control`
+5. `System Preferences>Mission Control`
    - Uncheck `Automatically rearrange spaces based on most recent use`
 
-### Setting Up Code Environment ###
-1. Download iTerm as a Terminal replacement
+### Setting Up Terminal Environment ###
+1. Configure iTerm
    - `Preferences>General>Closing` uncheck `Confirm closing multiple sessions`
    - `Preferences>General>Closing` uncheck `Confirm "Quit iTerm2" if windows open`
    - `Preferences>Appearance>Tabs` set `Tab bar location` to `Bottom`
@@ -42,19 +46,27 @@
    - `Preferences>Profiles>Window>Settings for New Windows` set `Style` to `No Title Bar`
    - `Preferences>Profiles>Terminal>Scrollback Buffer` check `Unlimited scrollback`
    - `Preferences>Profiles>Terminal>Notifications` check `Silence bell`
-2. Run `./environment.sh`
-3. `environment.sh` will output the public ssh and gpg keys, add these to github
+
+### Overview of appinstall.sh ###
+Install flux, spectacle, and iterm2
+
+### Overview of config.sh ###
+Copies repo `.gitconfig`, `.vimrc`, and `.zshrc` to the home directory.
+Sources `.zshrc` from the home directory.
 
 ### Overview of environment.sh ###
 The script creates a `Projects` folder in the home directory which will be the main workspace for
 creating new projects. `.zshrc` has an alias `workspace` (or simply `ws`) to directly change to
-this directory. The Homebrew package manager for Mac is then installed. The repo `.gitconfig` is
-copied to the home directory. SSH and GPG keys for github are then created. These will need to be
-added to github manually later. Vim and Z-shell are installed, then the repo `.vimrc` and `.zshrc`
-are copied into the home directory. The `Oh-My-Zsh` framework for Z-shell is then installed. Python
-will then be installed if it had not already been installed (which is very unlikely). Finally, go
-is installed, with a go subdirectory being created inside the `Projects` directory. Inside the
-.zshrc the `GOPATH` is configured to this directory (`Projects/go`)
+this directory. A go subdirectory is created inside the `Projects` directory. Inside the `.zshrc`
+the `GOPATH` is configured to this directory (`~/Projects/go`). Apps are installed via the appinstall
+script. Packages are installed via the packageinstall script. Git, Vim, Zsh, etc are configured via
+the config.sh script. SSH/GPG keys are created via the generatekeys script. These keys will be output
+by the script. Make sure to add these to git. Finally, the default shell is replaced with zsh.
+### Overview of generatekeys.sh ###
+Generates SSH and GPG keys which will be output for addition to github.
+
+### Overview of packageinstall.sh ###
+Installs homebrew package manager, xcode developer tools, zshell, python, and go.
 
 ### Overview of .vimrc ###
 The .vimrc sets backspace to be allowed at the beginning of a line, end of line, and at indents.
