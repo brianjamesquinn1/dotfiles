@@ -25,6 +25,7 @@
    - `Preferences>General>Closing` uncheck `Confirm "Quit iTerm2" if windows open`
    - `Preferences>Appearance>Tabs` set `Tab bar location` to `Bottom`
    - `Preferences>Appearance>Tabs` uncheck `Show tab bar in fullscreen`
+   - `Preferences>Appearance>Window` check `Hide scrollbars`
    - `Preferences>Profiles>General` set `Send text at start:` to `source ~/.zshrc`
    - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #E8D5A9
    - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #16222D
