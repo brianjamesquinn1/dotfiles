@@ -42,5 +42,4 @@ HISTSIZE=1000
 SAVEHIST=5000
 setopt appendhistory beep
 unsetopt extendedglob
-bindkey -v
 # End of lines configured by zsh-newuser-install
