@@ -66,7 +66,7 @@ by the script. Make sure to add these to git. Finally, the default shell is repl
 Generates SSH and GPG keys which will be output for addition to github.
 
 ### Overview of packageinstall.sh ###
-Installs homebrew package manager, xcode developer tools, zshell, python, and go.
+Installs homebrew package manager, xcode developer tools, vim, ctags, zshell, tmux, python, and go.
 
 ### Overview of .vimrc ###
 The .vimrc sets backspace to be allowed at the beginning of a line, end of line, and at indents.
@@ -74,6 +74,7 @@ Autoindent is set, expanding tabs into spaces is set, shift width and tabstop ar
 Line numbers are turned on.
 
 ### Overview of .zshrc ###
-Aliases: `pro` is set to globally set the github username and user-email. `workspace` and `ws` are
-both set to change the directory to the `Projects` folder. `GOPATH` is set, and Z-shell/Oh-My-Zsh
-settings are set.
+Aliases: `ctags` is aliased to use homebrew version. `please` reruns the previous command as sudo.
+`pro` is set to globally set the github username and user-email. `workspace` and `ws` are both set
+to change the directory to the `Projects` folder. `GOPATH` is set, and Z-shell/Oh-My-Zsh settings are set.
+
