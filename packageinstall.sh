@@ -15,6 +15,9 @@ git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # brew install ctags # Use this to install exuberant ctags (no longer maintained)
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags # Use this to instal universal ctags (no official release version)
 
+# Install Fzf
+brew install fzf
+
 # Install Z-shell
 echo "Installing zshell"
 brew install zsh

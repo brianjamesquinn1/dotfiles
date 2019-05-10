@@ -19,19 +19,25 @@ highlight DiffDelete cterm=none ctermfg=160  ctermbg=none
 highlight DiffChange cterm=none ctermfg=none ctermbg=none
 highlight DiffText   cterm=none ctermfg=220  ctermbg=240
 
-" Plugins "
+" Filetype "
 set nocompatible
 filetype off
+filetype plugin indent on
 
-" set the runtime path to include Vundle and initialize "
-set rtp+=~/.vim/bundle/Vundle.vim
+" Runtime Paths "
+set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
+set rtp+=/usr/local/opt/fzf "path for fzf
+
+" Plugins"
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required 
 Plugin 'universal-ctags/ctags'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
-filetype plugin indent on
+" End Plugins "
 

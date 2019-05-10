@@ -66,12 +66,13 @@ by the script. Make sure to add these to git. Finally, the default shell is repl
 Generates SSH and GPG keys which will be output for addition to github.
 
 ### Overview of packageinstall.sh ###
-Installs homebrew package manager, xcode developer tools, vim, ctags, zshell, tmux, python, and go.
+Installs homebrew package manager, xcode developer tools, vim, ctags, fzf, zshell, tmux, python, and go.
 
 ### Overview of .vimrc ###
 The .vimrc sets backspace to be allowed at the beginning of a line, end of line, and at indents.
 Autoindent is set, expanding tabs into spaces is set, shift width and tabstop are both set to 2.
-Line numbers are turned on.
+Background is set to dark. Line numbers are turned on. Diff colors are set for using difftool and mergetool.
+Filetype settings are configured for plugins. Runtime paths are added for plugins. Vundle plugins are added.
 
 ### Overview of .zshrc ###
 Aliases: `ctags` is aliased to use homebrew version. `please` reruns the previous command as sudo.
