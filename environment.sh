@@ -5,7 +5,7 @@ mv ../dotfiles $HOME/Projects
 WORKSPACE=$HOME/Projects
 
 # Make GOPATH directory
-sudo mkdir -p $WORKSPACE/go
+mkdir -p $WORKSPACE/go
 
 # Install OSX Apps
 ./appinstall.sh
