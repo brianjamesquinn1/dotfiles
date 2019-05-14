@@ -41,3 +41,6 @@ Plugin 'junegunn/fzf.vim'
 call vundle#end()
 " End Plugins "
 
+" Tags "
+set tags=./.tags,.tags;$WORKSPACE
+
