@@ -18,6 +18,9 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags # Use this t
 # Install Fzf
 brew install fzf
 
+# Install Rg
+brew install ripgrep
+
 # Install Z-shell
 echo "Installing zshell"
 brew install zsh

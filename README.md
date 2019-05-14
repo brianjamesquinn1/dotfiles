@@ -66,7 +66,7 @@ by the script. Make sure to add these to git. Finally, the default shell is repl
 Generates SSH and GPG keys which will be output for addition to github.
 
 ### Overview of packageinstall.sh ###
-Installs homebrew package manager, xcode developer tools, vim, ctags, fzf, zshell, tmux, python, and go.
+Installs homebrew package manager, xcode developer tools, vim, ctags, fzf, rg, zshell, tmux, python, and go.
 
 ### Overview of .vimrc ###
 The .vimrc sets backspace to be allowed at the beginning of a line, end of line, and at indents.
