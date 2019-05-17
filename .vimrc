@@ -28,6 +28,9 @@ filetype plugin indent on
 set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
 set rtp+=/usr/local/opt/fzf "path for fzf
 
+" Directory "
+set autochdir
+
 " Plugins"
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
