@@ -11,3 +11,7 @@ echo "Copying zshrc file"
 cp .zshrc ~/.zshrc
 source .zshrc
 
+# Configure tmux
+echo "Copying tmux.conf file"
+cp .tmux.conf ~/.tmux.conf
+

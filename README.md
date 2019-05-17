@@ -51,7 +51,7 @@
 Install flux, spectacle, and iterm2
 
 ### Overview of config.sh ###
-Copies repo `.gitconfig`, `.vimrc`, and `.zshrc` to the home directory.
+Copies repo `.gitconfig`, `.vimrc`, `.zshrc`, and `.tmux.conf` to the home directory.
 Sources `.zshrc` from the home directory.
 
 ### Overview of environment.sh ###
@@ -78,4 +78,7 @@ Filetype settings are configured for plugins. Runtime paths are added for plugin
 Aliases: `ctags` is aliased to use homebrew version. `please` reruns the previous command as sudo.
 `pro` is set to globally set the github username and user-email. `workspace` and `ws` are both set
 to change the directory to the `Projects` folder. `GOPATH` is set, and Z-shell/Oh-My-Zsh settings are set.
+
+### Overview of .tmux.conf ###
+Sets mouse scroll by default.
 
