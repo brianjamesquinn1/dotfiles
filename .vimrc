@@ -32,7 +32,8 @@ set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
 set rtp+=/usr/local/opt/fzf "path for fzf
 
 " Directory "
-set autochdir
+au BufEnter * silent! :lcd%:p:h
+let g:netrw_keepdir=0
 
 " Plugins"
 call vundle#begin()
