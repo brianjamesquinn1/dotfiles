@@ -3,7 +3,7 @@
 	email = brianjamesquinn1@gmail.com
 [merge]
 	tool = vimdiff
-	conflictstyle = diff3
+	conflictstyle = merge
 [diff]
 	tool = vimdiff
 [difftool]
