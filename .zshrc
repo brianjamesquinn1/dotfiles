@@ -48,3 +48,6 @@ SAVEHIST=5000
 setopt appendhistory beep
 unsetopt extendedglob
 # End of lines configured by zsh-newuser-install
+
+setopt INC_APPEND_HISTORY
+
