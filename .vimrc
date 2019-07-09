@@ -22,6 +22,20 @@ highlight DiffDelete cterm=none ctermfg=160  ctermbg=none
 highlight DiffChange cterm=none ctermfg=none ctermbg=none
 highlight DiffText   cterm=none ctermfg=220  ctermbg=240
 
+" Global Buffer Settings "
+let g:ale_fixers = {
+\  'javascript': [
+\    'prettier',
+\    'eslint',
+\  ],
+\  'go': [
+\    'gofmt',
+\    'goimports',
+\  ],
+\}
+
+let g:ale_fix_on_save = 1
+
 " Filetype "
 set nocompatible
 filetype off
@@ -44,6 +58,7 @@ Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 Plugin 'universal-ctags/ctags'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 " End Plugins "
