@@ -23,6 +23,7 @@ highlight DiffChange cterm=none ctermfg=none ctermbg=none
 highlight DiffText   cterm=none ctermfg=220  ctermbg=240
 
 " Global Buffer Settings "
+let g:ale_lint_delay = 0
 let g:ale_fixers = {
 \  'javascript': [
 \    'prettier',
@@ -33,7 +34,6 @@ let g:ale_fixers = {
 \    'goimports',
 \  ],
 \}
-
 let g:ale_fix_on_save = 1
 
 " Filetype "
