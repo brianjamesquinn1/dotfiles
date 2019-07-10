@@ -25,6 +25,7 @@ P         : paste directly on cursor
 V       : enter visual line mode
 ctl-v   : enter visual block mode
 ctl-o   : jump to previous location
+@@      : rerun last colon command 
 :Ex     : enter file explorer in current buffer
 :Hex    : open file explorer in horizontal split (below)
 :Vex!   : open file explorer in vertical split (right; note ! modifier)
