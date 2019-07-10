@@ -41,9 +41,13 @@ g]      : list tags
 ctl-t   : jump up/out from tag stack (location before jumping to a tag)
 ctl-w } : open tag in preview window
 ctl-w z : close preview window
-][      : move to next closing brace in column 0 (good for navitgating functions)
-[]      : move to previous closing brace in column 0
 
 # Modifiers #
 Capitalization : often reverses direction of movement (n vs N)
 !              : reverses the direction of a split pane
+
+# Uncommon #
+[{      : move to beginning of code block
+]}      : move to end of code block
+][      : move to next closing brace in column 0 (good for navitgating functions)
+[]      : move to previous closing brace in column 0
