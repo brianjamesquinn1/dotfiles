@@ -22,30 +22,30 @@ P         : paste directly on cursor
 :vsp      : vertical split
 
 ### Advanced ###
-V            : enter visual line mode
-ctl-v        : enter visual block mode
-ctl-o        : jump to previous location
-@:           : run last colon command
-@@           : rerun last @: command
-:Ex          : enter file explorer in current buffer
-:Hex         : open file explorer in horizontal split (below)
-:Vex!        : open file explorer in vertical split (right; note ! modifier)
-:FZF         : file search (recursively searches from current directory)
-:Rg          : word search (grep; recursively searches from current directory)
-:tabnew      : create new tab in file explorer
-gt           : next tab
-gT           : previous tab
-:tab sp      : open current window in new tab
-I            : insert on all lines (visual block mode)
-r            : replace all (visual block mode)
-ctl-]        : jump to tag (definition)
-g]           : list tags
-ctl-t        : jump up/out from tag stack (location before jumping to a tag)
-ctl-w }      : open tag in preview window
-ctl-w z      : close preview window
-:lw          : open error list
-:lnext       : go to next warning/error
-:lprevious   : go to previous warning/error
+V       : enter visual line mode
+ctl-v   : enter visual block mode
+ctl-o   : jump to previous location
+@:      : run last colon command
+@@      : rerun last @: command
+:Ex     : enter file explorer in current buffer
+:Hex    : open file explorer in horizontal split (below)
+:Vex!   : open file explorer in vertical split (right; note ! modifier)
+:FZF    : file search (recursively searches from current directory)
+:Rg     : word search (grep; recursively searches from current directory)
+:tabnew : create new tab in file explorer
+gt      : next tab
+gT      : previous tab
+:tab sp : open current window in new tab
+I       : insert on all lines (visual block mode)
+r       : replace all (visual block mode)
+ctl-]   : jump to tag (definition)
+g]      : list tags
+ctl-t   : jump up/out from tag stack (location before jumping to a tag)
+ctl-w } : open tag in preview window
+ctl-w z : close preview window
+:lw     : open error list
+:lne    : go to next warning/error
+:lp     : go to previous warning/error
 
 # Modifiers #
 Capitalization : often reverses direction of movement (n vs N)
