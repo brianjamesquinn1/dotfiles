@@ -44,6 +44,7 @@ ctl-t   : jump up/out from tag stack (location before jumping to a tag)
 ctl-w } : open tag in preview window
 ctl-w z : close preview window
 :lw     : open error list
+:lcl    : close error list
 :lne    : go to next warning/error
 :lp     : go to previous warning/error
 
