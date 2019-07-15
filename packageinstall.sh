@@ -37,4 +37,6 @@ sudo easy_install pip
 
 # Install Go
 brew install go
+go get golang.org/x/tools/cmd/goimports
+go get golang.org/x/tools/gopls
 

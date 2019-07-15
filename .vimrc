@@ -29,14 +29,22 @@ let g:ale_lint_on_filetype_changed = 0
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
-let g:ale_fixers = {
-\  'javascript': [
-\    'prettier',
-\    'eslint',
-\  ],
+let g:ale_linters = {
 \  'go': [
 \    'gofmt',
 \    'goimports',
+\    'golint',
+\    'gopls',
+\  ],
+\}
+let g:ale_fixers = {
+\  'go': [
+\    'gofmt',
+\    'goimports',
+\  ],
+\  'javascript': [
+\    'prettier',
+\    'eslint',
 \  ],
 \}
 let g:ale_fix_on_save = 1
