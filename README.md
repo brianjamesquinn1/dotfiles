@@ -46,6 +46,8 @@
    - `Preferences>Profiles>Window>Settings for New Windows` set `Style` to `No Title Bar`
    - `Preferences>Profiles>Terminal>Scrollback Buffer` check `Unlimited scrollback`
    - `Preferences>Profiles>Terminal>Notifications` check `Silence bell`
+   - `Preferences>Keys>Hotkey` check `Show/hide all windows with a system-wide hotkey`
+     - Set `Hotkey` to opt-space
 
 ### Overview of appinstall.sh ###
 Install flux, spectacle, and iterm2
