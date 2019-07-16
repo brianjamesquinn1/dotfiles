@@ -25,6 +25,11 @@ P         : paste directly on cursor
 V       : enter visual line mode
 ctl-v   : enter visual block mode
 ctl-o   : jump to previous location
+shift-3 : jump to previous occurance
+shift-8 : jump to next occurance
+zt      : move line to top
+zz      : move line to middle
+zb      : move line to bottom
 @:      : run last colon command
 @@      : rerun last @: command
 :Ex     : enter file explorer in current buffer

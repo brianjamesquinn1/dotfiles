@@ -80,8 +80,12 @@ call vundle#end()
 set tags=./.tags,.tags;$WORKSPACE
 
 " Mappings "
-" Overwrite completion with ALE
-inoremap <silent> <C-n> <C-\><C-O>:ALEComplete<CR>
 " Overwrite jump to tag with ALE
 nnoremap <silent> <C-]> :ALEGoToDefinition<CR>
+" Overwrite completion with ALE
+inoremap <silent> <C-n> <C-\><C-O>:ALEComplete<CR>
+" Set ALE find references shortcut
+nnoremap <silent> <C-n> :ALEFindReferences<CR>
+" Set ALE preview shortcut
+nnoremap <silent> <C-h> :ALEHover<CR>
 
