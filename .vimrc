@@ -79,3 +79,9 @@ call vundle#end()
 " Tags "
 set tags=./.tags,.tags;$WORKSPACE
 
+" Mappings "
+" Overwrite completion with ALE
+inoremap <silent> <C-n> <C-\><C-O>:ALEComplete<CR>
+" Overwrite jump to tag with ALE
+nnoremap <silent> <C-]> :ALEGoToDefinition<CR>
+
