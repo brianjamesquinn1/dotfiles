@@ -15,6 +15,7 @@ set mouse=a
 " Visual "
 set background=dark
 set number
+set ruler
 
 " Colors "
 highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
