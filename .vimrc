@@ -16,6 +16,7 @@ set mouse=a
 set background=dark
 set number
 set ruler
+set nowrap
 
 " Colors "
 highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
