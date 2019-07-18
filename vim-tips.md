@@ -22,36 +22,37 @@ P         : paste directly on cursor
 :vsp      : vertical split
 
 ### Advanced ###
-V       : enter visual line mode
-ctl-v   : enter visual block mode
-ctl-o   : jump to previous location
-shift-3 : jump to previous occurance
-shift-8 : jump to next occurance
-zt      : move line to top
-zz      : move line to middle
-zb      : move line to bottom
-@:      : run last colon command
-@@      : rerun last @: command
-:Ex     : enter file explorer in current buffer
-:Hex    : open file explorer in horizontal split (below)
-:Vex!   : open file explorer in vertical split (right; note ! modifier)
-:FZF    : file search (recursively searches from current directory)
-:Rg     : word search (grep; recursively searches from current directory)
-:tabnew : create new tab in file explorer
-gt      : next tab
-gT      : previous tab
-:tab sp : open current window in new tab
-I       : insert on all lines (visual block mode)
-r       : replace all (visual block mode)
-ctl-]   : jump to tag (definition)
-g]      : list tags
-ctl-t   : jump up/out from tag stack (location before jumping to a tag)
-ctl-w } : open tag in preview window
-ctl-w z : close preview window
-:lw     : open error list
-:lcl    : close error list
-:lne    : go to next warning/error
-:lp     : go to previous warning/error
+V                       : enter visual line mode
+ctl-v                   : enter visual block mode
+ctl-o                   : jump to previous location
+shift-3                 : jump to previous occurance
+shift-8                 : jump to next occurance
+zt                      : move line to top
+zz                      : move line to middle
+zb                      : move line to bottom
+@:                      : run last colon command
+@@                      : rerun last @: command
+:Ex                     : enter file explorer in current buffer
+:Hex                    : open file explorer in horizontal split (below)
+:Vex!                   : open file explorer in vertical split (right; note ! modifier)
+:FZF                    : file search (recursively searches from current directory)
+:Rg                     : word search (grep; recursively searches from current directory)
+:tabnew                 : create new tab in file explorer
+gt                      : next tab
+gT                      : previous tab
+:tab sp                 : open current window in new tab
+I                       : insert on all lines (visual block mode)
+r                       : replace all (visual block mode)
+:s/<search>/<replace>/g : replace all occurances of a word (a range in the form of line numbers can be provided before the s)
+ctl-]                   : jump to tag (definition)
+g]                      : list tags
+ctl-t                   : jump up/out from tag stack (location before jumping to a tag)
+ctl-w }                 : open tag in preview window
+ctl-w z                 : close preview window
+:lw                     : open error list
+:lcl                    : close error list
+:lne                    : go to next warning/error
+:lp                     : go to previous warning/error
 
 # Modifiers #
 Capitalization : often reverses direction of movement (n vs N)
