@@ -1,4 +1,5 @@
 syntax on
+colorscheme gruvbox
 
 " Characters "
 set backspace=indent,eol,start
@@ -18,13 +19,13 @@ set number
 set ruler
 set nowrap
 
-" Colors "
-highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
-highlight DiffDelete cterm=none ctermfg=160  ctermbg=none
-highlight DiffChange cterm=none ctermfg=none ctermbg=none
-highlight DiffText   cterm=none ctermfg=220  ctermbg=240
-highlight Pmenu      cterm=none ctermfg=none ctermbg=103
-highlight PmenuSel   cterm=none ctermfg=17   ctermbg=220
+" Non Gruvbox Colors "
+"highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
+"highlight DiffDelete cterm=none ctermfg=160  ctermbg=none
+"highlight DiffChange cterm=none ctermfg=none ctermbg=none
+"highlight DiffText   cterm=none ctermfg=220  ctermbg=240
+"highlight Pmenu      cterm=none ctermfg=none ctermbg=103
+"highlight PmenuSel   cterm=none ctermfg=17   ctermbg=220
 
 " Global Buffer Settings "
 let g:ale_lint_delay = 0

@@ -3,8 +3,10 @@ echo "Copying gitconfig file"
 cp .gitconfig ~/.gitconfig
 
 # Configure Vim
-echo "Copying vimrc file"
+echo "Copying vim files"
 cp .vimrc ~/.vimrc
+mkdir ~/.vim
+cp -r .vim/colors ~/.vim
 
 # Configure Z-shell
 echo "Copying zshrc file"

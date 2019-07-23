@@ -32,7 +32,7 @@
    - `Preferences>Appearance>Window` check `Hide scrollbars`
    - `Preferences>Profiles>General` set `Send text at start:` to `source ~/.zshrc`
    - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #E8D5A9
-   - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #16222D
+   - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #282828 (#16222D for non-gruvbox)
    - `Preferences>Profiles>Colors>Basic Colors` set `Bold` to #DFBD22
    - `Preferences>Profiles>Colors>Basic Colors` set `Selection` to #411916
    - `Preferences>Profiles>Colors>Basic Colors` set `Selected text` to #5FFA68
