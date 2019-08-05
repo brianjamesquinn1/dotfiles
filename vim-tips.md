@@ -44,11 +44,16 @@ gT                      : previous tab
 I                       : insert on all lines (visual block mode)
 r                       : replace all (visual block mode)
 :s/<search>/<replace>/g : replace all occurances of a word (a range in the form of line numbers can be provided before the s)
-ctl-]                   : jump to tag (definition)
+ctl-]                   : fast jump to tag (definition)
+ctl-p                   : advanced jump to tag (always accurate but needs preprocessing/slow first time)
 g]                      : list tags
 ctl-t                   : jump up/out from tag stack (location before jumping to a tag)
 ctl-w }                 : open tag in preview window
+ctl-h                   : advanced definition preview
 ctl-w z                 : close preview window
+ctl-n                   : fast auto-complete
+ctl-space               : advanced find references (normal mode)
+ctl-space               : advanced auto-complete (insert mode)
 :lw                     : open error list
 :lcl                    : close error list
 :lne                    : go to next warning/error
