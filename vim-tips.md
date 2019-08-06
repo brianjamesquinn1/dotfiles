@@ -54,10 +54,14 @@ ctl-w z                 : close preview window
 ctl-n                   : fast auto-complete
 ctl-space               : advanced find references (normal mode)
 ctl-space               : advanced auto-complete (insert mode)
-:lw                     : open error list
-:lcl                    : close error list
-:lne                    : go to next warning/error
-:lp                     : go to previous warning/error
+:lw                     : open local list (ALE uses to list errors)
+:copen                  : open quickfix list
+:lcl                    : close local list
+:ccl                    : close quickfix list
+:lne                    : go to next local list entry (warning/error)
+:cn                     : go to next quickfix entry
+:lp                     : go to previous local list entry (warning/error)
+:cp                     : go to previous quickfix entry
 
 # Modifiers #
 Capitalization : often reverses direction of movement (n vs N)
