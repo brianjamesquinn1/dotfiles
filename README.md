@@ -31,7 +31,7 @@
    - `Preferences>Appearance>Tabs` uncheck `Show tab bar in fullscreen`
    - `Preferences>Appearance>Window` check `Hide scrollbars`
    - `Preferences>Profiles>General` set `Send text at start:` to `source ~/.zshrc`
-   - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #E8D5A9
+   - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #FFD7AF (#E8D5A9 for non-gruvbox)
    - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #282828 (#16222D for non-gruvbox)
    - `Preferences>Profiles>Colors>Basic Colors` set `Bold` to #DFBD22
    - `Preferences>Profiles>Colors>Basic Colors` set `Selection` to #411916
