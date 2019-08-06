@@ -32,14 +32,14 @@ zb        : move line to bottom
 @@        : rerun last @: command  
 gt        : next tab  
 gT        : previous tab  
-ctl-]     : fast jump to tag (definition)\* {universal-ctags}  
-ctl-p     : advanced jump to tag (always accurate but needs preprocessing/slow first time)\*^<sup>1</sup> {ALE}  
+ctl-]     : fast jump to tag (definition) [*] {universal-ctags}  
+ctl-p     : advanced jump to tag (always accurate but needs preprocessing/slow first time) [*^1] {ALE}  
 g]        : list tags  
 ctl-t     : jump up/out from tag stack (location before jumping to a tag)  
 ctl-w }   : open tag in preview window  
-ctl-h     : advanced definition preview\*^<sup>1</sup> {ALE}  
+ctl-h     : advanced definition preview [*^1] {ALE}  
 ctl-w z   : close preview window  
-ctl-space : advanced find references\*^<sup>1</sup> {ALE}  
+ctl-space : advanced find references [*^1] {ALE}  
 [{        : move to beginning of code block  
 ]}        : move to end of code block  
 ][        : move to next closing brace in column 0 (good for navitgating functions)  
@@ -53,7 +53,7 @@ ctl-n : fast auto-complete
 ```
 ### Advanced ###
 ```
-ctl-space : advanced auto-complete\*^<sup>1</sup>  
+ctl-space : advanced auto-complete [*^1] {ALE}  
 ```
 
 # Visual Mode #
@@ -76,8 +76,8 @@ s/<search>/<replace>/g : replace all occurances of a word (a range in the form o
 Ex                     : enter file explorer in current buffer  
 Hex                    : open file explorer in horizontal split (below)  
 Vex!                   : open file explorer in vertical split (right; note ! modifier)  
-FZF                    : file search (recursively searches from current directory)\* {FZF}  
-Rg                     : word search (grep; recursively searches from current directory)\*<sup>2</sup> {FZF}  
+FZF                    : file search (recursively searches from current directory) [*] {FZF}  
+Rg                     : word search (grep; recursively searches from current directory) [*2] {FZF}  
 tabnew                 : create new tab in file explorer  
 tab sp                 : open current window in new tab  
 lw                     : open local list (ALE uses to list errors)  
