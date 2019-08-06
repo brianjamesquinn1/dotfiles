@@ -1,5 +1,6 @@
 # Normal Mode #
 ### Basic ###
+```
 i         : enter insert mode  
 v         : enter visual mode  
 :         : enter command mode  
@@ -43,24 +44,34 @@ ctl-space : advanced find references\*^<sup>1</sup> {ALE}
 ]}        : move to end of code block  
 ][        : move to next closing brace in column 0 (good for navitgating functions)  
 []        : move to previous closing brace in column 0  
+```
 
 # Insert Mode #
 ### Basic ###
+```
 ctl-n : fast auto-complete  
+```
 ### Advanced ###
-ctl-space : advanced auto-complete\*^  
+```
+ctl-space : advanced auto-complete\*^<sup>1</sup>  
+```
 
 # Visual Mode #
 ### Basic ###
+```
 d : delete & copy current selection  
 y : copy current selection  
+```
 
 # Command Mode #
 ### Basic ###
+```
 <number> : jump to line number  
 sp       : horizontal split  
 vsp      : vertical split  
+```
 ### Advanced ###
+```
 s/<search>/<replace>/g : replace all occurances of a word (a range in the form of line numbers can be provided before the s)  
 Ex                     : enter file explorer in current buffer  
 Hex                    : open file explorer in horizontal split (below)  
@@ -77,22 +88,29 @@ lne                    : go to next local list entry (warning/error)
 cn                     : go to next quickfix entry  
 lp                     : go to previous local list entry (warning/error)  
 cp                     : go to previous quickfix entry  
+```
 
 # Visual Line Mode #
+```
 d : delete & copy lines  
+```
 
 # Visual Block Mode #
+```
 I : insert on all lines  
 r : replace all  
 d : delete & copy current selection  
+```
 
 ### Modifiers ###
+```
 Capitalization : often reverses direction of movement (n vs N)  
 !              : reverses the direction of a split pane  
+```
 
 ### Note ###
-\*Anything marked with an asterisk requires the subsequently listed plugin  
-^Anything marked with a caret requires a custom vim mapping  
+\*Requires the subsequently listed plugin  
+^Requires a custom vim mapping  
 <sup>1</sup>Requires LSPs install and configured with ALE  
 <sup>2</sup>Requires ripgrep installed
 
