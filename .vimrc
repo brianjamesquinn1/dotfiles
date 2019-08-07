@@ -1,5 +1,4 @@
 syntax on
-colorscheme gruvbox
 
 " Characters "
 set backspace=indent,eol,start
@@ -18,6 +17,10 @@ set background=dark
 set number
 set ruler
 set nowrap
+
+" Gruvbox Colors "
+let g:gruvbox_inverse = 0
+colorscheme gruvbox
 
 " Non Gruvbox Colors "
 "highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
