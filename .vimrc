@@ -53,6 +53,9 @@ let g:ale_fixers = {
 \  ],
 \}
 let g:ale_fix_on_save = 1
+let g:fzf_colors =
+\ { 'hl':      ['fg', 'GruvboxBlue'],
+  \ 'hl+':     ['fg', 'GruvboxYellow'] }
 
 " Filetype "
 set nocompatible
@@ -93,3 +96,5 @@ nnoremap <silent> <C-@> :ALEFindReferences<CR>
 " Map ALE preview shortcut
 nnoremap <silent> <C-h> :ALEHover<CR>
 
+" Commands "
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:109,hl+:214'}, <bang>0)

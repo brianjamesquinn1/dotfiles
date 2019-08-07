@@ -20,30 +20,31 @@ dd        : delete & copy current line
 p         : paste on line below  
 P         : paste directly on cursor  
 ### Advanced ###
-V         : enter visual line mode  
-ctl-v     : enter visual block mode  
-ctl-o     : jump to previous location  
-\#        : jump to previous occurance  
-\*        : jump to next occurance  
-zt        : move line to top  
-zz        : move line to middle  
-zb        : move line to bottom  
-@:        : run last colon command  
-@@        : rerun last @: command  
-gt        : next tab  
-gT        : previous tab  
-ctl-]     : fast jump to tag (definition) [*] {universal-ctags}  
-ctl-p     : advanced jump to tag (always accurate but needs preprocessing/slow first time) [*^1] {ALE}  
-g]        : list tags  
-ctl-t     : jump up/out from tag stack (location before jumping to a tag)  
-ctl-w }   : open tag in preview window  
-ctl-h     : advanced definition preview [*^1] {ALE}  
-ctl-w z   : close preview window  
-ctl-space : advanced find references [*^1] {ALE}  
-[{        : move to beginning of code block  
-]}        : move to end of code block  
-][        : move to next closing brace in column 0 (good for navitgating functions)  
-[]        : move to previous closing brace in column 0  
+V           : enter visual line mode  
+ctl-v       : enter visual block mode  
+ctl-o       : jump to previous location  
+\#          : jump to previous occurance  
+\*          : jump to next occurance  
+zt          : move line to top  
+zz          : move line to middle  
+zb          : move line to bottom  
+@:          : run last colon command  
+@@          : rerun last @: command  
+ctl-w ctl-r : reverse panes
+gt          : next tab  
+gT          : previous tab  
+ctl-]       : fast jump to tag (definition) [*] {universal-ctags}  
+ctl-p       : advanced jump to tag (always accurate but needs preprocessing/slow first time) [*^1] {ALE}  
+g]          : list tags  
+ctl-t       : jump up/out from tag stack (location before jumping to a tag)  
+ctl-w }     : open tag in preview window  
+ctl-h       : advanced definition preview [*^1] {ALE}  
+ctl-w z     : close preview window  
+ctl-space   : advanced find references [*^1] {ALE}  
+[{          : move to beginning of code block  
+]}          : move to end of code block  
+][          : move to next closing brace in column 0 (good for navitgating functions)  
+[]          : move to previous closing brace in column 0  
 ```
 
 # Insert Mode #
@@ -117,6 +118,9 @@ opt-a : select all
 opt-d : deselect all
 tab   : select
 enter : go to first selection (opens quickfix list if multiple selections)
+ctl-v : open in vertical split
+ctl-x : open in horizontal split
+ctl-t : open in new tab
 ```
 
 ### Note ###
