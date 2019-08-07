@@ -108,6 +108,16 @@ Capitalization : often reverses direction of movement (n vs N)
 !              : reverses the direction of a split pane  
 ```
 
+## Plugins ##
+### FZF ###
+After running an FZF command such as :FZF or :Rg
+```
+opt-a : select all
+opt-d : deselect all
+tab   : select
+enter : go to first selection (opens quickfix list if multiple selections)
+```
+
 ### Note ###
 \*Requires the subsequently listed plugin  
 ^Requires a custom vim mapping  
