@@ -76,8 +76,8 @@ s/<search>/<replace>/g : replace all occurances of a word (a range in the form o
 Ex                     : enter file explorer in current buffer  
 Hex                    : open file explorer in horizontal split (below)  
 Vex!                   : open file explorer in vertical split (right; note ! modifier)  
-FZF                    : file search (recursively searches from current directory) [*] {FZF}  
-Rg                     : word search (grep; recursively searches from current directory) [*2] {FZF}  
+FZF                    : file search (recursively searches from current directory; ! modifier opens in fullscreen) [*] {FZF}  
+Rg                     : word search (grep; recursively searches from current directory; ! modifier opens in fullscreen) [*2] {FZF}  
 tabnew                 : create new tab in file explorer  
 tab sp                 : open current window in new tab  
 lw                     : open local list (ALE uses to list errors)  
@@ -105,7 +105,7 @@ d : delete & copy current selection
 ### Modifiers ###
 ```
 Capitalization : often reverses direction of movement (n vs N)  
-!              : reverses the direction of a split pane  
+!              : often reverses the direction or sets to fullscreen  
 ```
 
 ## Plugins ##
