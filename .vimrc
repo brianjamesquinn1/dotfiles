@@ -88,6 +88,8 @@ call vundle#end()
 set tags=./.tags,.tags;$WORKSPACE
 
 " Mappings "
+" Ripgrep the cursor
+nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
 " Map ALE jump to tag
 nnoremap <silent> <C-p> :ALEGoToDefinition<CR>D
 " Map ALE  completion
