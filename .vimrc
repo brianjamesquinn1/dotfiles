@@ -63,12 +63,12 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
+" Directory "
+let g:netrw_keepdir=0
+
 " Runtime Paths "
 set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
 set rtp+=/usr/local/opt/fzf "path for fzf
-
-" Directory "
-let g:netrw_keepdir=0
 
 " Plugins"
 call vundle#begin()
