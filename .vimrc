@@ -54,8 +54,9 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:fzf_colors =
-\ { 'hl':      ['fg', 'GruvboxBlue'],
-  \ 'hl+':     ['fg', 'GruvboxYellow'] }
+\ { 'hl':      ['fg', 'Identifier'],
+  \ 'bg+':     ['bg', 'PMenu'],
+  \ 'hl+':     ['fg', 'CursorLineNr'] }
 
 " Filetype "
 set nocompatible
@@ -97,4 +98,4 @@ nnoremap <silent> <C-@> :ALEFindReferences<CR>
 nnoremap <silent> <C-h> :ALEHover<CR>
 
 " Commands "
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:109,hl+:214'}, <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
