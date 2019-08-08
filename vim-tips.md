@@ -35,6 +35,9 @@ zz          : move line to middle
 zb          : move line to bottom  
 @:          : run last colon command  
 @@          : rerun last @: command  
+ctl-w |     : maximize current pane horizontally
+ctl-w _     : maximize current pane vertically
+ctl-w =     : make all panes equal space
 ctl-w ctl-r : reverse panes
 gt          : next tab  
 gT          : previous tab  
