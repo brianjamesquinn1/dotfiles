@@ -75,9 +75,11 @@ y : copy current selection
 # Command Mode #
 ### Basic ###
 ```
-<number> : jump to line number  
-sp       : horizontal split  
-vsp      : vertical split  
+<number>   : jump to line number  
+sp         : horizontal split  
+vsp        : vertical split  
+set wrap   : wrap text
+set nowrap : don't wrap text
 ```
 ### Advanced ###
 ```
