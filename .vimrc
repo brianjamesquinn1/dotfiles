@@ -23,6 +23,7 @@ let g:gruvbox_inverse = 0
 colorscheme gruvbox
 
 " Non Gruvbox Colors "
+highlight RipgrepBlue cterm=none ctermfg=14 ctermbg=none
 "highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
 "highlight DiffDelete cterm=none ctermfg=160  ctermbg=none
 "highlight DiffChange cterm=none ctermfg=none ctermbg=none
@@ -57,7 +58,7 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:fzf_colors =
-\ { 'hl':      ['fg', 'Identifier'],
+\ { 'hl':      ['fg', 'RipgrepBlue'],
   \ 'bg+':     ['bg', 'PMenu'],
   \ 'hl+':     ['fg', 'CursorLineNr'] }
 
@@ -90,9 +91,13 @@ call vundle#end()
 " Tags "
 set tags=./.tags,.tags;$WORKSPACE
 
+" Commands "
+command! -bang -nargs=* FZF call fzf#vim#files(<q-args>, <bang>0)
+command! -bang -nargs=* RG call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
+
 " Mappings "
 " Ripgrep the cursor
-nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
+nnoremap <silent> <C-f> :RG <C-r><C-w><CR>
 " Map ALE jump to tag
 nnoremap <silent> <C-p> :ALEGoToDefinition<CR>D
 " Map ALE  completion
@@ -102,5 +107,3 @@ nnoremap <silent> <C-@> :ALEFindReferences<CR>
 " Map ALE preview shortcut
 nnoremap <silent> <C-h> :ALEHover<CR>
 
-" Commands "
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:109,hl+:214'}, <bang>0)
