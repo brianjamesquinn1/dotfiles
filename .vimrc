@@ -93,7 +93,7 @@ set tags=./.tags,.tags;$WORKSPACE
 
 " Commands "
 command! -bang -nargs=* -complete=dir Fzf call fzf#vim#files(<q-args>, <bang>0)
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
 
 " Mappings "
 " Ripgrep the cursor
