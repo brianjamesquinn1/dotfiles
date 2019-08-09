@@ -101,6 +101,8 @@ lne                    : go to next local list entry (warning/error)
 cn                     : go to next quickfix entry  
 lp                     : go to previous local list entry (warning/error)  
 cp                     : go to previous quickfix entry  
+cd %:h                 : change netrw to current directory (helpful to search with Fzf/Rg in only the current directory)
+cd -                   : change netrw to previous directory (helpful to change Fzf/Rg back to global search after using the above
 ```
 
 # Visual Line Mode #

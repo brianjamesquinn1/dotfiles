@@ -68,7 +68,7 @@ filetype off
 filetype plugin indent on
 
 " Directory "
-let g:netrw_keepdir=0
+"let g:netrw_keepdir=0
 
 " Runtime Paths "
 set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
@@ -83,7 +83,7 @@ Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 Plugin 'universal-ctags/ctags'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 
 call vundle#end()
 " End Plugins "
