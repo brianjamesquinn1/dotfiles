@@ -92,12 +92,12 @@ call vundle#end()
 set tags=./.tags,.tags;$WORKSPACE
 
 " Commands "
-command! -bang -nargs=* FZF call fzf#vim#files(<q-args>, <bang>0)
-command! -bang -nargs=* RG call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
+command! -bang -nargs=* -complete=dir Fzf call fzf#vim#files(<q-args>, <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
 
 " Mappings "
 " Ripgrep the cursor
-nnoremap <silent> <C-f> :RG <C-r><C-w><CR>
+nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
 " Map ALE jump to tag
 nnoremap <silent> <C-p> :ALEGoToDefinition<CR>D
 " Map ALE  completion

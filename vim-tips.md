@@ -88,8 +88,8 @@ Ex                     : enter file explorer in current buffer
 Hex                    : open file explorer in horizontal split (below)  
 Vex!                   : open file explorer in vertical split (right; note ! modifier)  
 Tex                    : open file explorer in new tab
-FZF                    : file search (recursively searches from current directory; ! modifier opens in fullscreen) [*] {FZF}  
-RG                     : word search (grep; recursively searches from current directory; ! modifier opens in fullscreen) [*2] {FZF}  
+Fzf                    : file search (recursively searches from current directory; ! modifier opens in fullscreen) [*] {FZF}  
+Rg                     : word search (grep; recursively searches from current directory; ! modifier opens in fullscreen) [*2] {FZF}  
 ctl-f                  : search for word under cursor [*^2] {FZF}  
 ctl-r ctl-w            : insert word under cursor into command  
 tab sp                 : open current window in new tab  
