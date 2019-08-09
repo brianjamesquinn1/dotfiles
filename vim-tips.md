@@ -127,13 +127,14 @@ Capitalization : often reverses direction of movement (n vs N)
 ### FZF ###
 After running an FZF command such as :FZF or :Rg
 ```
-opt-a : select all  
-opt-d : deselect all  
-tab   : select  
-enter : go to first selection (opens quickfix list if multiple selections)  
-ctl-v : open in vertical split  
-ctl-x : open in horizontal split  
-ctl-t : open in new tab  
+opt-a     : select all  
+opt-d     : deselect all  
+tab       : select  
+shift-tab : select + move upward
+enter     : go to first selection (opens quickfix list if multiple selections)  
+ctl-v     : open in vertical split  
+ctl-x     : open in horizontal split  
+ctl-t     : open in new tab  
 ```
 
 ### Note ###
