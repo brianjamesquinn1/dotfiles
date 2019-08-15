@@ -125,7 +125,7 @@ Capitalization : often reverses direction of movement (n vs N)
 
 ## Plugins ##
 ### FZF ###
-After running an FZF command such as :FZF or :Rg
+After running an FZF command such as :Fzf or :Rg
 ```
 opt-a     : select all  
 opt-d     : deselect all  
