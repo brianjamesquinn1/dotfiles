@@ -48,7 +48,7 @@
    - `Preferences>Profiles>Terminal>Notifications` check `Silence bell`
    - `Preferences>Profiles>Keys>Left Option Key` check `Esc+`
    - `Preferences>Profiles>Keys>Right Option Key` check `Esc+`
-   - `Preferences>Keys>Hotkey` check `Show/hide all windows with a system-wide hotkey`
+   - `Preferences>Profiles>Keys>Hotkey Window` check `A hotkey opens a dedicated window with this profile`
      - Set `Hotkey` to opt-space
 
 ### Overview of appinstall.sh ###
