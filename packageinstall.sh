@@ -4,6 +4,7 @@ echo "Installing dependencies"
 
 # Install Mac Developer Tools
 xcode-select --install
+sudo /usr/sbin/DevToolsSecurity -enable
 
 # Install Vim
 echo "Installing Vim"
@@ -29,14 +30,24 @@ command -v zsh | sudo tee -a /etc/shells
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install tmux
+echo "Installing tmux"
 brew install tmux
 
 # Install Python
+echo "Installing Python + dependencies"
 brew install python
 sudo easy_install pip
 
 # Install Go
+echo "Installing Go + dependencies"
 brew install go
 go get golang.org/x/tools/cmd/goimports
 go get golang.org/x/tools/gopls
+go get -u github.com/go-delve/delve/cmd/dlv
+
+# Install Javascript
+echo "Installing Javascript + dependencies"
+brew install yarn
+brew install prettier
+brew install eslint
 

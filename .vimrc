@@ -45,6 +45,9 @@ let g:ale_linters = {
 \    'golint',
 \    'gopls',
 \  ],
+\  'javascript': [
+\    'eslint',
+\  ],
 \}
 let g:ale_fixers = {
 \  'go': [
@@ -53,7 +56,6 @@ let g:ale_fixers = {
 \  ],
 \  'javascript': [
 \    'prettier',
-\    'eslint',
 \  ],
 \}
 let g:ale_fix_on_save = 1
