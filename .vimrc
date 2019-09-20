@@ -98,6 +98,8 @@ command! -bang -nargs=* -complete=dir Fzf call fzf#vim#files(<q-args>, <bang>0)
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
 
 " Mappings "
+" Enter on pop up menu selects
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " Ripgrep the cursor
 nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
 " Map ALE jump to tag
