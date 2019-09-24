@@ -22,6 +22,9 @@ brew install fzf
 # Install Rg
 brew install ripgrep
 
+# Install htop
+brew install htop
+
 # Install Z-shell
 echo "Installing zshell"
 brew install zsh
