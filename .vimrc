@@ -103,7 +103,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " Ripgrep the cursor
 nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
 " Map ALE jump to tag
-nnoremap <silent> <C-p> :ALEGoToDefinition<CR>D
+nnoremap <silent> <C-p> :ALEGoToDefinition<CR>
 " Map ALE  completion
 inoremap <silent> <C-@> <C-\><C-O>:ALEComplete<CR>
 " Map ALE find references shortcut
