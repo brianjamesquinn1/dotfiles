@@ -33,6 +33,12 @@ L           : jump to bottom of screen
 zt          : move line to top  
 zz          : move line to middle  
 zb          : move line to bottom  
+zf<motion>  : fold action
+zfid        : fold paragraph
+zo          : open folded lines
+zc          : close fold
+za          : toggle fold
+zd          : remove fold
 @:          : run last colon command  
 @@          : rerun last @: command  
 ctl-w |     : maximize current pane horizontally
@@ -107,7 +113,8 @@ cd -                   : change netrw to previous directory (helpful to change F
 
 # Visual Line Mode #
 ```
-d : delete & copy lines  
+d  : delete & copy lines  
+zf : fold lines
 ```
 
 # Visual Block Mode #
