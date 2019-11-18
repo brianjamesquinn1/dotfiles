@@ -3,10 +3,11 @@
 
 ### Command Line ###
 ```
-tmux                    : enter a tmux window in the given directory
-tmux new -s <session>   : create new session with name
-tmux ls                 : list tmux sessions
-tmux attach -t <target> : attach to the target session
+tmux                      : enter a tmux window in the given directory
+tmux new -s <session>     : create new session with name
+tmux ls                   : list tmux sessions
+tmux attach -t <target>   : attach to the target session
+tmux rename-window <name> : rename current window to name
 ```
 
 ### ctl-b commands (tmux commands) ###
