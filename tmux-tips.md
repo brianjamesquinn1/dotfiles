@@ -9,6 +9,7 @@ tmux ls                           : list tmux sessions
 tmux attach -t <target>           : attach to the target session
 tmux new -t <target> -s <session> : create a new session attached to a previous session (allows two cursors in the same session but not the same pane)
 tmux rename-window <name>         : rename current window to name
+tmux kill-session -t <target>     : externally kill a tmux session
 ```
 
 ### ctl-b commands (tmux commands) ###
