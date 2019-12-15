@@ -54,3 +54,6 @@ brew install yarn
 brew install prettier
 brew install eslint
 
+# Install Elixir
+echo "Installing Elixir + dependencies"
+brew install elixir
