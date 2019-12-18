@@ -31,13 +31,13 @@
    - `Preferences>Appearance>Tabs` uncheck `Show tab bar in fullscreen`
    - `Preferences>Appearance>Window` check `Hide scrollbars`
    - `Preferences>Profiles>General` set `Send text at start:` to `source ~/.zshrc`
-   - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #EFE1C2 (#E8D5A9 for non-gruvbox)
-   - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #282828 (#16222D for non-gruvbox)
+   - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #E8D5A9 (#EFE1C2 to match gruvbox)
+   - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #16222D (#282828 to match gruvbox)
    - `Preferences>Profiles>Colors>Basic Colors` set `Bold` to #DFBD22
    - `Preferences>Profiles>Colors>Basic Colors` set `Selection` to #411916
    - `Preferences>Profiles>Colors>Basic Colors` set `Selected text` to #5FFA68
    - `Preferences>Profiles>Colors>Cursor Colors` set `Cursor` to #FFCC66
-   - `Preferences>Profiles>Colors>Cursor Colors` set `Cursor text` to #EFE1C2 (#E8D5A9 for non-gruvbox)
+   - `Preferences>Profiles>Colors>Cursor Colors` set `Cursor text` to #E8D5A9 (#EFE1C2 to match gruvbox)
    - `Preferences>Profiles>Colors>Cursor Colors` set `Cursor guide` to #8DBAC9
    - `Preferences>Profiles>Text>Cursor` check `Blinking Cursor`
    - `Preferences>Profiles>Text>Font` change font to `14pt Menlo Regular`
