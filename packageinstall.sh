@@ -25,10 +25,6 @@ brew install ripgrep
 # Install htop
 brew install htop
 
-# Install Z-shell
-echo "Installing zshell"
-brew install zsh
-command -v zsh | sudo tee -a /etc/shells
 # Install Oh-My-Zsh (Z-shell Configuration Manager)
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 

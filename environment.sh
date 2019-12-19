@@ -13,12 +13,9 @@ mkdir -p $WORKSPACE/go
 # Install Packages
 ./packageinstall.sh
 
-# Configure git, vim, zsh, etc
+# Configure git, vim, etc
 ./config.sh
 
 # Generate SSH and GPG keys for git
 ./generatekeys.sh
-
-# Replace Bash with Z-shell
-chsh -s $(command -v zsh)
 
