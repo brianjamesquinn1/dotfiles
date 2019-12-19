@@ -84,6 +84,7 @@ Plugin 'universal-ctags/ctags'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'dense-analysis/ale'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 call vundle#end()
 " End Plugins "
