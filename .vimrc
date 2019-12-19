@@ -79,12 +79,13 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required 
-Plugin 'universal-ctags/ctags'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'dense-analysis/ale'
-Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'VundleVim/Vundle.vim'         "let Vundle manage Vundle, required 
+Plugin 'junegunn/fzf'                 "allows use of fzf
+Plugin 'junegunn/fzf.vim'             "and rg
+Plugin 'universal-ctags/ctags'        "simple tagging/jump to def
+Plugin 'dense-analysis/ale'           "linting/LSP features
+Plugin 'yuezk/vim-js'                 "better js/flow highlighting
+Plugin 'maxmellon/vim-jsx-pretty'     "react highlighting
 
 call vundle#end()
 " End Plugins "
