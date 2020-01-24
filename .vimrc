@@ -1,3 +1,9 @@
+" Filetype "
+set nocompatible
+filetype off
+filetype plugin indent on
+
+" Syntax "
 syntax on
 
 " Characters "
@@ -64,11 +70,6 @@ let g:fzf_colors =
   \ 'bg+':     ['bg', 'PMenu'],
   \ 'hl+':     ['fg', 'CursorLineNr'] }
 
-" Filetype "
-set nocompatible
-filetype off
-filetype plugin indent on
-
 " Directory "
 "let g:netrw_keepdir=0
 
@@ -86,6 +87,8 @@ Plugin 'junegunn/fzf'                 "allows use of fzf
 Plugin 'junegunn/fzf.vim'             "and rg
 Plugin 'universal-ctags/ctags'        "simple tagging/jump to def
 Plugin 'dense-analysis/ale'           "linting/LSP features
+
+Plugin 'elixir-editors/vim-elixir'    "better elixir highlighting
 Plugin 'yuezk/vim-js'                 "better js/flow highlighting
 Plugin 'maxmellon/vim-jsx-pretty'     "react highlighting
 
