@@ -13,9 +13,5 @@ mkdir -p $WORKSPACE/go
 # Install Packages
 ./packageinstall.sh
 
-# Configure git, vim, etc
-./config.sh
-
-# Generate SSH and GPG keys for git
-./generatekeys.sh
-
+# Setup vim
+./vim.sh

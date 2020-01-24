@@ -1,8 +1,9 @@
 ### Installation & Environment Setup ###
 1. Run `./environment.sh`, this will install/setup anything that can be automated
-   - an overview of each script can be found at the bottom
-2. `environment.sh` will output the public ssh and gpg keys, add these to github
-3. Follow instructions below to configure manual settings
+2. Navigate to the `languages` directory and run the corresponding shell script for
+   any language you will be working with
+3. If ssh/gpg keys are desired for your github account, run `./generatekeys.sh`
+4. Follow instructions below to configure manual settings
 
 ### Setting Up Laptop Preferences ###
 1. Configure Flux
@@ -52,37 +53,14 @@
      - Set `Hotkey` to opt-space
 
 ### Overview of appinstall.sh ###
-Install flux, spectacle, and iterm2
-
-### Overview of config.sh ###
-Copies repo `.gitconfig`, `.vimrc`, `.zshrc`, and `.tmux.conf` to the home directory.
-Sources `.zshrc` from the home directory.
-
-### Overview of environment.sh ###
-The script creates a `Projects` folder in the home directory which will be the main workspace for
-creating new projects. `.zshrc` has an alias `workspace` (or simply `ws`) to directly change to
-this directory. A go subdirectory is created inside the `Projects` directory. Inside the `.zshrc`
-the `GOPATH` is configured to this directory (`~/Projects/go`). Apps are installed via the appinstall
-script. Packages are installed via the packageinstall script. Git, Vim, Zsh, etc are configured via
-the config.sh script. SSH/GPG keys are created via the generatekeys script. These keys will be output
-by the script. Make sure to add these to git. Finally, the default shell is replaced with zsh.
-### Overview of generatekeys.sh ###
-Generates SSH and GPG keys which will be output for addition to github.
+Install flux, rectangle, and iterm2
 
 ### Overview of packageinstall.sh ###
-Installs homebrew package manager, xcode developer tools, vim, ctags, fzf, rg, zshell, tmux, python, and go.
+Installs general command line tools and configures them
 
-### Overview of .vimrc ###
-The .vimrc sets backspace to be allowed at the beginning of a line, end of line, and at indents.
-Autoindent is set, expanding tabs into spaces is set, shift width and tabstop are both set to 2.
-Background is set to dark. Line numbers are turned on. Diff colors are set for using difftool and mergetool.
-Filetype settings are configured for plugins. Runtime paths are added for plugins. Vundle plugins are added.
+### Overview of environment.sh ###
+Creates a default workspace and runs the appinstall, packageinstall, and vim shell scripts
 
-### Overview of .zshrc ###
-Aliases: `ctags` is aliased to use homebrew version. `please` reruns the previous command as sudo.
-`pro` is set to globally set the github username and user-email. `workspace` and `ws` are both set
-to change the directory to the `Projects` folder. `GOPATH` is set, and Z-shell/Oh-My-Zsh settings are set.
-
-### Overview of .tmux.conf ###
-Sets mouse scroll by default.
+### Overview of generatekeys.sh ###
+Generates SSH and GPG keys which will be output for addition to github.
 
