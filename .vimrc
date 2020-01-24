@@ -45,6 +45,7 @@ let g:ale_linters = {
 \  ],
 \  'javascript': [
 \    'eslint',
+\    'flow-language-server',
 \  ],
 \}
 let g:ale_fixers = {
@@ -54,6 +55,7 @@ let g:ale_fixers = {
 \  ],
 \  'javascript': [
 \    'prettier',
+\    'eslint',
 \  ],
 \}
 let g:ale_fix_on_save = 1
