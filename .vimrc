@@ -1,3 +1,25 @@
+" Runtime Paths "
+set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
+set rtp+=/usr/local/opt/fzf "path for fzf
+
+" Plugins"
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+Plugin 'VundleVim/Vundle.vim'         "let Vundle manage Vundle, required
+Plugin 'junegunn/fzf'                 "allows use of fzf
+Plugin 'junegunn/fzf.vim'             "and rg
+Plugin 'universal-ctags/ctags'        "simple tagging/jump to def
+Plugin 'dense-analysis/ale'           "linting/LSP features
+
+Plugin 'elixir-editors/vim-elixir'    "better elixir highlighting
+Plugin 'yuezk/vim-js'                 "better js/flow highlighting
+Plugin 'maxmellon/vim-jsx-pretty'     "react highlighting
+
+call vundle#end()
+" End Plugins "
+
 " Filetype "
 set nocompatible
 filetype off
@@ -72,28 +94,6 @@ let g:fzf_colors =
 
 " Directory "
 "let g:netrw_keepdir=0
-
-" Runtime Paths "
-set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
-set rtp+=/usr/local/opt/fzf "path for fzf
-
-" Plugins"
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-Plugin 'VundleVim/Vundle.vim'         "let Vundle manage Vundle, required 
-Plugin 'junegunn/fzf'                 "allows use of fzf
-Plugin 'junegunn/fzf.vim'             "and rg
-Plugin 'universal-ctags/ctags'        "simple tagging/jump to def
-Plugin 'dense-analysis/ale'           "linting/LSP features
-
-Plugin 'elixir-editors/vim-elixir'    "better elixir highlighting
-Plugin 'yuezk/vim-js'                 "better js/flow highlighting
-Plugin 'maxmellon/vim-jsx-pretty'     "react highlighting
-
-call vundle#end()
-" End Plugins "
 
 " Tags "
 set tags=./.tags,.tags;$WORKSPACE
