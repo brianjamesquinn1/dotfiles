@@ -67,6 +67,9 @@ let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters = {
+\  'elixir': [
+\    'elixir-ls',
+\  ],
 \  'go': [
 \    'golint',
 \    'gopls',
@@ -77,6 +80,9 @@ let g:ale_linters = {
 \  ],
 \}
 let g:ale_fixers = {
+\  'elixir': [
+\    'mix_format',
+\  ],
 \  'go': [
 \    'gofmt',
 \    'goimports',
@@ -91,6 +97,7 @@ let g:fzf_colors =
 \ { 'hl':      ['fg', 'RipgrepBlue'],
   \ 'bg+':     ['bg', 'PMenu'],
   \ 'hl+':     ['fg', 'CursorLineNr'] }
+let g:ale_elixir_elixir_ls_release = $WORKSPACE.'/elixir-ls/release'
 
 " Directory "
 "let g:netrw_keepdir=0

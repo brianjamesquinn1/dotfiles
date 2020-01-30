@@ -2,7 +2,7 @@
 echo "Creating Workspace"
 mkdir -p $HOME/Projects
 mv ../dotfiles $HOME/Projects
-WORKSPACE=$HOME/Projects
+export WORKSPACE=$HOME/Projects
 
 # Make GOPATH directory
 mkdir -p $WORKSPACE/go

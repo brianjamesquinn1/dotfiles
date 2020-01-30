@@ -7,6 +7,7 @@ alias ws='cd $HOME/Projects'
 alias workspace='cd $HOME/Projects'
 
 # Environment Variables
+export WORKSPACE=$HOME/Projects
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
 export TERM=xterm-256color
