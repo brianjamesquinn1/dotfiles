@@ -10,7 +10,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'         "let Vundle manage Vundle, required
 Plugin 'junegunn/fzf'                 "allows use of fzf
 Plugin 'junegunn/fzf.vim'             "and rg
-Plugin 'universal-ctags/ctags'        "simple tagging/jump to def
 Plugin 'dense-analysis/ale'           "linting/LSP features
 
 Plugin 'elixir-editors/vim-elixir'    "better elixir highlighting

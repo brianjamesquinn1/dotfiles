@@ -1,8 +1,6 @@
 # Aliases
-alias ctags='`brew --prefix`/bin/ctags'
 alias please='sudo $(fc -ln -1)'
 alias pro='git config --global user.name "<insert name>" && git config --global user.email "<insert email>" && cp ~/.ssh/id_rsa_pro.pub ~/.ssh/id_rsa.pub && cp ~/.ssh/id_rsa_pro ~/.ssh/id_rsa'
-alias tag='ctags -R -o .tags .'
 alias ws='cd $HOME/Projects'
 alias workspace='cd $HOME/Projects'
 
