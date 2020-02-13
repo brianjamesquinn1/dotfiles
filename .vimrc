@@ -83,6 +83,10 @@ let g:ale_linters = {
 \    'eslint',
 \    'flow-language-server',
 \  ],
+\  'rust': [
+\    'rustc',
+\    'rls',
+\  ],
 \}
 let g:ale_fixers = {
 \  'cpp': [
@@ -99,6 +103,9 @@ let g:ale_fixers = {
 \  'javascript': [
 \    'prettier',
 \    'eslint',
+\  ],
+\  'rust': [
+\    'rustfmt',
 \  ],
 \}
 let g:ale_fix_on_save = 1
