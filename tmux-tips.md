@@ -19,7 +19,8 @@ These commands are available once inside tmux by typing `ctl-b` <command>
 %       : vertical split
 "       : horizontal split
 c       : new tab
-w       : view all windows
+s       : view all sessions (collapsed windows)
+w       : view all sessions+windows
 z       : maximize/reset current pane
 <arrow> : switch to pane in the arrow key direction
 n       : next tab
