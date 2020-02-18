@@ -135,7 +135,7 @@ nnoremap <silent> <C-p> :ALEGoToDefinition<CR>
 " Map ALE  completion
 inoremap <silent> <C-@> <C-\><C-O>:ALEComplete<CR>
 " Map ALE find references shortcut
-nnoremap <silent> <C-@> :ALEFindReferences<CR>
+nnoremap <silent> <C-@> :ALEFindReferences -relative<CR>
 " Map ALE preview shortcut
 nnoremap <silent> <C-h> :ALEHover<CR>
 
