@@ -7,10 +7,11 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-Plugin 'VundleVim/Vundle.vim'         "let Vundle manage Vundle, required
-Plugin 'junegunn/fzf'                 "allows use of fzf
-Plugin 'junegunn/fzf.vim'             "and rg
-Plugin 'dense-analysis/ale'           "linting/LSP features
+Plugin 'VundleVim/Vundle.vim'             "let Vundle manage Vundle, required
+Plugin 'junegunn/fzf'                     "allows use of fzf
+Plugin 'junegunn/fzf.vim'                 "and rg
+Plugin 'dense-analysis/ale'               "linting/LSP features
+Plugin 'stefandtw/quickfix-reflector.vim' "enable changing files in quickfix/loclist buffers (helpful for project wide find& replace)
 
 Plugin 'elixir-editors/vim-elixir'    "better elixir highlighting
 Plugin 'yuezk/vim-js'                 "better js/flow highlighting
@@ -60,6 +61,7 @@ highlight Search      cterm=none ctermfg=14   ctermbg=none
 "highlight PmenuSel   cterm=none ctermfg=17   ctermbg=220
 
 " Global Buffer Settings "
+" ALE "
 let g:ale_lint_delay = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_filetype_changed = 0
@@ -110,11 +112,14 @@ let g:ale_fixers = {
 \  ],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_elixir_elixir_ls_release = $WORKSPACE.'/elixir-ls/release'
+" FZF "
 let g:fzf_colors =
 \ { 'hl':      ['fg', 'RipgrepBlue'],
   \ 'bg+':     ['bg', 'PMenu'],
   \ 'hl+':     ['fg', 'CursorLineNr'] }
-let g:ale_elixir_elixir_ls_release = $WORKSPACE.'/elixir-ls/release'
+" Quickfix-reflector "
+let g:qf_modifiable = 0
 
 " Directory "
 "let g:netrw_keepdir=0
