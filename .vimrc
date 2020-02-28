@@ -55,6 +55,7 @@ highlight DiffAdd    cterm=none ctermfg=118  ctermbg=none
 highlight DiffDelete cterm=none ctermfg=160  ctermbg=none
 highlight DiffChange cterm=none ctermfg=none ctermbg=none
 highlight DiffText   cterm=none ctermfg=220  ctermbg=240
+highlight Search      cterm=none ctermfg=14   ctermbg=none
 "highlight Pmenu      cterm=none ctermfg=none ctermbg=103
 "highlight PmenuSel   cterm=none ctermfg=17   ctermbg=220
 
