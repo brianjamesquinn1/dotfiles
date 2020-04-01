@@ -25,6 +25,7 @@ P         : paste directly on cursor
 V           : enter visual line mode  
 ctl-v       : enter visual block mode  
 ctl-o       : jump to previous location  
+ctl-i       : jump forward to 'next location' (the place before ctl-o)  
 \#          : jump to previous occurance  
 \*          : jump to next occurance  
 H           : jump to top of screen  
