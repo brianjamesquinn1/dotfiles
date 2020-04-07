@@ -25,6 +25,9 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
+" File Explorer "
+let g:netrw_list_hide= '.*\.swp$,\.orig$'
+
 " Syntax "
 syntax on
 
