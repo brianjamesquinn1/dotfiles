@@ -146,4 +146,5 @@ inoremap <silent> <C-@> <C-\><C-O>:ALEComplete<CR>
 nnoremap <silent> <C-@> :ALEFindReferences -relative<CR>
 " Map ALE preview shortcut
 nnoremap <silent> <C-h> :ALEHover<CR>
-
+" Open all diff files in split view from provided branch (use for code review)
+cmap PR Git difftool -y
