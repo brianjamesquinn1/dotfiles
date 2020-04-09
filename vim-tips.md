@@ -101,6 +101,7 @@ Rg                     : word search (grep; recursively searches from current di
 ctl-f                  : search for word under cursor [*^2] {FZF}  
 ctl-r ctl-w            : insert word under cursor into command  
 tab sp                 : open current window in new tab  
+tabclose               : close all windows in current tab
 lw                     : open local list (ALE uses to list errors)  
 copen                  : open quickfix list  
 lcl                    : close local list  
