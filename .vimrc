@@ -79,6 +79,7 @@ let g:ale_linters = {
 \    'flawfinder',
 \  ],
 \  'elixir': [
+\    'credo',
 \    'elixir-ls',
 \  ],
 \  'go': [
