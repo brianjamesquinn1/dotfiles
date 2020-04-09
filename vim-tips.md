@@ -56,6 +56,7 @@ ctl-w }     : open tag in preview window
 ctl-h       : advanced definition preview [*^1] {ALE}  
 ctl-w z     : close preview window  
 ctl-space   : advanced find references [*^1] {ALE}  
+ctl-d       : toggle diff from master
 [{          : move to beginning of code block  
 ]}          : move to end of code block  
 ][          : move to next closing brace in column 0 (good for navitgating functions)  
@@ -98,7 +99,8 @@ Tex                    : open file explorer in new tab
 Fzf                    : file search (recursively searches from current directory; ! modifier opens in fullscreen) [*] {FZF}  
 Fzf <directory>        : file search within the given directory (directory can be tab completed) [*] {FZF}
 Rg                     : word search (grep; recursively searches from current directory; ! modifier opens in fullscreen) [*2] {FZF}  
-PR <branch>            : alias for :Git difftool -y <branch>, open all files (in splitview) differing from <branch> in a different tab [*^] {Fugitive}
+difflist <hash>        : populate quickfix list with files differing from <hash> (branch or commit) (alias for :Git difftool --name-only <hash>) [*^] {Fugitive}
+PR <branch>            : open all files  differing from <branch> in a different tab in splitview (alias for :Git difftool -y <branch>) [*^] {Fugitive}
 ctl-f                  : search for word under cursor [*^2] {FZF}  
 ctl-r ctl-w            : insert word under cursor into command  
 tab sp                 : open current window in new tab  
