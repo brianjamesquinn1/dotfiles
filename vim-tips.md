@@ -56,7 +56,7 @@ ctl-w }     : open tag in preview window
 ctl-h       : advanced definition preview [*^1] {ALE}  
 ctl-w z     : close preview window  
 ctl-space   : advanced find references [*^1] {ALE}  
-ctl-d       : toggle diff from master
+ctl-d       : toggle diff between files in current tab
 [{          : move to beginning of code block  
 ]}          : move to end of code block  
 ][          : move to next closing brace in column 0 (good for navitgating functions)  

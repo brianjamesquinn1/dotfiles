@@ -129,6 +129,15 @@ let g:qf_modifiable = 0
 " Directory "
 "let g:netrw_keepdir=0
 
+" Functions "
+function! DiffToggle()
+    if &diff
+        diffoff
+    else
+        diffthis
+    endif
+:endfunction
+
 " Commands "
 command! -bang -nargs=* -complete=dir Fzf call fzf#vim#files(<q-args>, <bang>0)
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
@@ -150,5 +159,5 @@ nnoremap <silent> <C-h> :ALEHover <CR>
 cmap PR Git difftool -y
 " List all diffed files in quickfix list from provided branch/commit
 cmap difflist Git difftool --name-only
-" Toggle diff from master
-nnoremap <silent> <C-d> :Gdiff! master <CR>
+" Toggle diff between files in current tab
+nnoremap <silent> <C-d> :call DiffToggle() <CR>
