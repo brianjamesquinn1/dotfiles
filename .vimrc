@@ -148,16 +148,16 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " Ripgrep the cursor
 nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
 " Map ALE jump to tag
-nnoremap <silent> <C-p> :ALEGoToDefinition <CR>
+nnoremap <silent> <C-p> :ALEGoToDefinition<CR>
 " Map ALE  completion
-inoremap <silent> <C-@> <C-\><C-O> :ALEComplete <CR>
+inoremap <silent> <C-@> <C-\><C-O>:ALEComplete<CR>
 " Map ALE find references shortcut
-nnoremap <silent> <C-@> :ALEFindReferences -relative <CR>
+nnoremap <silent> <C-@> :ALEFindReferences -relative<CR>
 " Map ALE preview shortcut
-nnoremap <silent> <C-h> :ALEHover <CR>
+nnoremap <silent> <C-h> :ALEHover<CR>
 " Open all diff files in split view from provided branch/commit (use for code review)
 cmap PR Git difftool -y
 " List all diffed files in quickfix list from provided branch/commit
 cmap difflist Git difftool --name-only
 " Toggle diff between files in current tab
-nnoremap <silent> <C-d> :call DiffToggle() <CR>
+nnoremap <silent> <C-d> :call DiffToggle()<CR>
