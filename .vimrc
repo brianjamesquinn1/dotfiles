@@ -126,9 +126,6 @@ let g:fzf_colors =
 " Quickfix-reflector "
 let g:qf_modifiable = 0
 
-" Directory "
-"let g:netrw_keepdir=0
-
 " Functions "
 function! DiffToggle()
     if &diff
