@@ -14,6 +14,8 @@ Plugin 'dense-analysis/ale'               "linting/LSP features
 Plugin 'tpope/vim-fugitive'               "git tools, useful for rebase/merge/code review
 Plugin 'stefandtw/quickfix-reflector.vim' "enable changing files in quickfix/loclist buffers (helpful for project wide find& replace)
 
+Plugin 'junegunn/vader.vim' "add plugin for vim vader testing framework
+
 Plugin 'elixir-editors/vim-elixir'    "better elixir highlighting
 Plugin 'yuezk/vim-js'                 "better js/flow highlighting
 Plugin 'maxmellon/vim-jsx-pretty'     "react highlighting
