@@ -97,6 +97,9 @@ let g:ale_linters = {
 \    'rustc',
 \    'rls',
 \  ],
+\  'vim': [
+\    'vimls',
+\  ],
 \}
 let g:ale_fixers = {
 \  'cpp': [
