@@ -150,6 +150,9 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " Ripgrep the cursor
 nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
+" Map ALE toggle
+nnoremap <silent> <C-a> :ALEToggle<CR>
+inoremap <silent> <C-a> <C-\><C-O>:ALEToggle<CR>
 " Map ALE jump to tag
 nnoremap <silent> <C-p> :ALEGoToDefinition<CR>
 " Map ALE  completion
