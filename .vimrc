@@ -145,7 +145,7 @@ function! DiffToggle()
 command! -bang -nargs=* -complete=dir Fzf call fzf#vim#files(<q-args>, <bang>0)
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
 
-" Mappings "
+" Mappings - use control for plugins, leader otherwise"
 " Enter on pop up menu selects
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " Ripgrep the cursor
@@ -167,3 +167,5 @@ cmap PR Git difftool -y
 cmap difflist Git difftool --name-only
 " Toggle diff between files in current tab
 nnoremap <silent> <C-d> :call DiffToggle()<CR>
+" Set highlight on search
+nnoremap <silent> <leader>/ :set hlsearch!<CR>
