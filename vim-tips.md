@@ -130,6 +130,19 @@ r : replace all
 d : delete & copy current selection  
 ```
 
+# File Explorer (netrw) #
+```
+enter : open file or directory
+-     : move up a directory
+%     : create file
+d     : create directory
+D     : delete file
+mt    : mark target directory for file operations
+mf    : mark file for operations
+mm    : move marked files into marked target
+mc    : copy marked files into market target
+```
+
 ### Modifiers ###
 ```
 Capitalization : often reverses direction of movement (n vs N)  
