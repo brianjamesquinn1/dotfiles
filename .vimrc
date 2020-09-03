@@ -169,3 +169,5 @@ cmap difflist Git difftool --name-only
 nnoremap <silent> <C-d> :call DiffToggle()<CR>
 " Set highlight on search
 nnoremap <silent> <leader>/ :set hlsearch!<CR>
+" Search for word under cursor in file
+nnoremap <silent> <leader>f /<C-r><C-w><CR>N :set hlsearch<CR>
