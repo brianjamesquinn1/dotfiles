@@ -5,6 +5,7 @@
 	tool = vimdiff
 	conflictstyle = merge
 [diff]
+  submodule = log
 	tool = vimdiff
 [difftool]
 	prompt = true

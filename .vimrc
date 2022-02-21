@@ -2,27 +2,6 @@
 set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
 set rtp+=/usr/local/opt/fzf "path for fzf
 
-" Plugins"
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-Plugin 'VundleVim/Vundle.vim'             "let Vundle manage Vundle, required
-Plugin 'junegunn/fzf'                     "allows use of fzf
-Plugin 'junegunn/fzf.vim'                 "and rg
-Plugin 'dense-analysis/ale'               "linting/LSP features
-Plugin 'tpope/vim-fugitive'               "git tools, useful for rebase/merge/code review
-Plugin 'stefandtw/quickfix-reflector.vim' "enable changing files in quickfix/loclist buffers (helpful for project wide find& replace)
-
-Plugin 'junegunn/vader.vim' "add plugin for vim vader testing framework
-
-Plugin 'elixir-editors/vim-elixir'    "better elixir highlighting
-Plugin 'yuezk/vim-js'                 "better js/flow highlighting
-Plugin 'maxmellon/vim-jsx-pretty'     "react highlighting
-
-call vundle#end()
-" End Plugins "
-
 " Filetype "
 set nocompatible
 filetype off
