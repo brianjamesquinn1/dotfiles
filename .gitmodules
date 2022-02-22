@@ -19,6 +19,33 @@
 [submodule ".vim/pack/plugins/opt/vim-polyglot"]
 	path = .vim/pack/plugins/opt/vim-polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
-[submodule ".vim/pack/plugins/start/vim-jsx-pretty"]
-	path = .vim/pack/plugins/start/vim-jsx-pretty
-	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule ".vim/pack/plugins/opt/ale"]
+	path = .vim/pack/plugins/opt/ale
+	url = git@github.com:dense-analysis/ale.git
+[submodule ".vim/pack/plugins/start/gruvbox"]
+	path = .vim/pack/plugins/start/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule ".vim/pack/plugins/start/everforest"]
+	path = .vim/pack/plugins/start/everforest
+	url = git@github.com:sainnhe/everforest.git
+[submodule ".vim/pack/plugins/start/vim-gruvbit"]
+	path = .vim/pack/plugins/start/vim-gruvbit
+	url = git@github.com:habamax/vim-gruvbit.git
+[submodule ".vim/pack/plugins/start/yowish"]
+	path = .vim/pack/plugins/start/yowish
+	url = git@github.com:KabbAmine/yowish.vim.git
+[submodule ".vim/pack/plugins/start/vim-monokai-pro"]
+	path = .vim/pack/plugins/start/vim-monokai-pro
+	url = git@github.com:phanviet/vim-monokai-pro.git
+[submodule ".vim/pack/plugins/start/vim-monokai-tasty"]
+	path = .vim/pack/plugins/start/vim-monokai-tasty
+	url = git@github.com:patstockwell/vim-monokai-tasty.git
+[submodule ".vim/pack/plugins/start/badwolf"]
+	path = .vim/pack/plugins/start/badwolf
+	url = git@github.com:sjl/badwolf.git
+[submodule ".vim/pack/plugins/start/vim-fahrenheit"]
+	path = .vim/pack/plugins/start/vim-fahrenheit
+	url = git@github.com:fcpg/vim-fahrenheit.git
+[submodule ".vim/pack/plugins/start/python-syntax"]
+	path = .vim/pack/plugins/start/python-syntax
+	url = git@github.com:vim-python/python-syntax.git

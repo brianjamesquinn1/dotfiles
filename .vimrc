@@ -1,5 +1,4 @@
 " Runtime Paths "
-set rtp+=~/.vim/bundle/Vundle.vim "path for vundle
 set rtp+=/usr/local/opt/fzf "path for fzf
 
 " Filetype "
@@ -12,6 +11,7 @@ let g:netrw_list_hide= '.*\.swp$,\.orig$'
 
 " Syntax "
 syntax on
+let g:python_highlight_all = 1
 
 " Characters "
 set backspace=indent,eol,start
@@ -35,15 +35,20 @@ set nowrap
 let g:gruvbox_inverse = 0
 colorscheme gruvbox
 
-" Non Gruvbox Colors "
+" Generic Colors "
 highlight RipgrepBlue cterm=none ctermfg=14   ctermbg=none
 highlight DiffAdd     cterm=none ctermfg=118  ctermbg=none
 highlight DiffDelete  cterm=none ctermfg=52   ctermbg=52
 highlight DiffChange  cterm=none ctermfg=none ctermbg=none
 highlight DiffText    cterm=none ctermfg=220  ctermbg=240
 highlight Search      cterm=none ctermfg=14   ctermbg=none
-"highlight Pmenu      cterm=none ctermfg=none ctermbg=103
-"highlight PmenuSel   cterm=none ctermfg=17   ctermbg=220
+" Persist After ColorScheme Change
+autocmd ColorScheme * highlight RipgrepBlue cterm=none ctermfg=14   ctermbg=none
+autocmd ColorScheme * highlight DiffAdd     cterm=none ctermfg=118  ctermbg=none
+autocmd ColorScheme * highlight DiffDelete  cterm=none ctermfg=52   ctermbg=52
+autocmd ColorScheme * highlight DiffChange  cterm=none ctermfg=none ctermbg=none
+autocmd ColorScheme * highlight DiffText    cterm=none ctermfg=220  ctermbg=240
+autocmd ColorScheme * highlight Search      cterm=none ctermfg=14   ctermbg=none
 
 " Global Buffer Settings "
 " ALE "
@@ -72,6 +77,9 @@ let g:ale_linters = {
 \  'javascript': [
 \    'eslint',
 \    'flow-language-server',
+\  ],
+\  'python': [
+\    'pyright',
 \  ],
 \  'rust': [
 \    'rustc',
@@ -103,6 +111,7 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:ale_elixir_elixir_ls_release = $WORKSPACE.'/elixir-ls/release'
+
 " FZF "
 let g:fzf_colors =
 \ { 'hl':      ['fg', 'RipgrepBlue'],
