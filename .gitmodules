@@ -49,3 +49,15 @@
 [submodule ".vim/pack/plugins/start/python-syntax"]
 	path = .vim/pack/plugins/start/python-syntax
 	url = git@github.com:vim-python/python-syntax.git
+[submodule ".vim/pack/plugins/start/vim-lsp"]
+	path = .vim/pack/plugins/start/vim-lsp
+	url = git@github.com:prabirshrestha/vim-lsp.git
+[submodule ".vim/pack/plugins/start/vim-lsp-settings"]
+	path = .vim/pack/plugins/start/vim-lsp-settings
+	url = git@github.com:mattn/vim-lsp-settings.git
+[submodule ".vim/pack/plugins/start/asyncomplete.vim"]
+	path = .vim/pack/plugins/start/asyncomplete.vim
+	url = git@github.com:prabirshrestha/asyncomplete.vim.git
+[submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
+	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
+	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
