@@ -1,0 +1,63 @@
+[submodule ".vim/pack/plugins/start/fzf"]
+	path = .vim/pack/plugins/start/fzf
+	url = git@github.com:junegunn/fzf.git
+[submodule ".vim/pack/plugins/start/fzf.vim"]
+	path = .vim/pack/plugins/start/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
+[submodule ".vim/pack/plugins/start/vim-fugitive"]
+	path = .vim/pack/plugins/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".vim/pack/plugins/opt/vim-signify"]
+	path = .vim/pack/plugins/opt/vim-signify
+	url = git@github.com:mhinz/vim-signify.git
+[submodule ".vim/pack/plugins/opt/quickfix-reflector"]
+	path = .vim/pack/plugins/opt/quickfix-reflector
+	url = git@github.com:stefandtw/quickfix-reflector.vim.git
+[submodule ".vim/pack/plugins/start/vim-js"]
+	path = .vim/pack/plugins/start/vim-js
+	url = git@github.com:yuezk/vim-js.git
+[submodule ".vim/pack/plugins/opt/vim-polyglot"]
+	path = .vim/pack/plugins/opt/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
+[submodule ".vim/pack/plugins/opt/ale"]
+	path = .vim/pack/plugins/opt/ale
+	url = git@github.com:dense-analysis/ale.git
+[submodule ".vim/pack/plugins/start/gruvbox"]
+	path = .vim/pack/plugins/start/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule ".vim/pack/plugins/start/everforest"]
+	path = .vim/pack/plugins/start/everforest
+	url = git@github.com:sainnhe/everforest.git
+[submodule ".vim/pack/plugins/start/vim-gruvbit"]
+	path = .vim/pack/plugins/start/vim-gruvbit
+	url = git@github.com:habamax/vim-gruvbit.git
+[submodule ".vim/pack/plugins/start/yowish"]
+	path = .vim/pack/plugins/start/yowish
+	url = git@github.com:KabbAmine/yowish.vim.git
+[submodule ".vim/pack/plugins/start/vim-monokai-pro"]
+	path = .vim/pack/plugins/start/vim-monokai-pro
+	url = git@github.com:phanviet/vim-monokai-pro.git
+[submodule ".vim/pack/plugins/start/vim-monokai-tasty"]
+	path = .vim/pack/plugins/start/vim-monokai-tasty
+	url = git@github.com:patstockwell/vim-monokai-tasty.git
+[submodule ".vim/pack/plugins/start/badwolf"]
+	path = .vim/pack/plugins/start/badwolf
+	url = git@github.com:sjl/badwolf.git
+[submodule ".vim/pack/plugins/start/vim-fahrenheit"]
+	path = .vim/pack/plugins/start/vim-fahrenheit
+	url = git@github.com:fcpg/vim-fahrenheit.git
+[submodule ".vim/pack/plugins/start/python-syntax"]
+	path = .vim/pack/plugins/start/python-syntax
+	url = git@github.com:vim-python/python-syntax.git
+[submodule ".vim/pack/plugins/start/vim-lsp"]
+	path = .vim/pack/plugins/start/vim-lsp
+	url = git@github.com:prabirshrestha/vim-lsp.git
+[submodule ".vim/pack/plugins/start/vim-lsp-settings"]
+	path = .vim/pack/plugins/start/vim-lsp-settings
+	url = git@github.com:mattn/vim-lsp-settings.git
+[submodule ".vim/pack/plugins/start/asyncomplete.vim"]
+	path = .vim/pack/plugins/start/asyncomplete.vim
+	url = git@github.com:prabirshrestha/asyncomplete.vim.git
+[submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
+	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
+	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
