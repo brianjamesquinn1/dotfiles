@@ -61,3 +61,6 @@
 [submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
 	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
 	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
+[submodule ".vim/pack/plugins/start/vim-jsx-pretty"]
+	path = .vim/pack/plugins/start/vim-jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
