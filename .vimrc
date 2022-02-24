@@ -102,7 +102,11 @@ nnoremap <silent> <C-d> :call DiffToggle()<CR>
 " TODO figure out how to only lint on save
 " Settings
 let g:asyncomplete_auto_popup = 0
+let g:lsp_signature_help_enabled = 0
 let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_echo_delay = 0
+let g:lsp_diagnostics_signs_error = {'text': '>>'}
+let g:lsp_diagnostics_signs_warning = {'text': '--'}
 " Mappings
 "nnoremap <silent> <C-a> :ALEToggle<CR> TODO figure out
 " how to toggle lsp#enable/disable should help
