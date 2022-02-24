@@ -1,24 +1,25 @@
 # Normal Mode #
 ### Basic ###
 ```
-i         : enter insert mode  
-v         : enter visual mode  
-:         : enter command mode  
-0         : move to beginning of line  
-I         : move to beginning of line + enter insert mode  
-$         : move to end of line  
-A         : move to end of line + enter insert mode  
-gg        : move to top of file  
-G         : move to bottom of file  
-%         : jump to matching brace  
-/+<regex> : search for regex (case sensitive)  
-n         : next occurance of search  
-N         : previous occurance of search  
-r         : replace  
-yy        : copy current line  
-dd        : delete & copy current line  
-p         : paste on line below  
-P         : paste directly on cursor  
+i          : enter insert mode  
+v          : enter visual mode  
+:          : enter command mode  
+0          : move to beginning of line  
+I          : move to beginning of line + enter insert mode  
+$          : move to end of line  
+A          : move to end of line + enter insert mode  
+gg         : move to top of file  
+G          : move to bottom of file  
+%          : jump to matching brace  
+/+<regex>  : search for regex (case sensitive)  
+n          : next occurance of search  
+N          : previous occurance of search  
+r          : replace  
+yy         : copy current line  
+dd         : delete & copy current line  
+p          : paste on line below  
+P          : paste directly on cursor  
+help <tag> : get help on a tag (call :helptags ALL to gen tags for plugins)  
 ```
 ### Advanced ###
 ```
