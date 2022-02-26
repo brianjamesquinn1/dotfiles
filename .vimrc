@@ -51,7 +51,7 @@ autocmd ColorScheme * highlight DiffText    cterm=none ctermfg=220  ctermbg=240
 autocmd ColorScheme * highlight Search      cterm=none ctermfg=14   ctermbg=none
 
 " Functions "
-function! DiffToggle()
+function! Diff_Toggle()
     if &diff
         diffoff
     else
@@ -59,7 +59,17 @@ function! DiffToggle()
     endif
 :endfunction
 
+function! Diagnostic_Toggle()
+    if g:lsp_diagnostics_float_cursor
+        let g:lsp_diagnostics_float_cursor = 0
+    else
+        let g:lsp_diagnostics_float_cursor = 1
+    endif
+:endfunction
+
 " Commands "
+command! -bang -nargs=0 DiffToggle call Diff_Toggle()
+command! -bang -nargs=0 DiagnosticToggle call Diagnostic_Toggle()
 command! -bang -nargs=* -complete=dir Fzf call fzf#vim#files(<q-args>, <bang>0)
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
 command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
@@ -96,7 +106,8 @@ cmap PR Git difftool -y
 " List all diffed files in quickfix list from provided branch/commit
 cmap difflist Git difftool --name-only
 " Toggle diff between files in current tab
-nnoremap <silent> <C-d> :call DiffToggle()<CR>
+nnoremap <silent> <leader>d :call Diff_Toggle()<CR>
+nnoremap <silent> <leader>e :call Diagnostic_Toggle()<CR>
 
 " Vim-lsp "
 " TODO figure out how to only lint on save
@@ -105,6 +116,8 @@ let g:asyncomplete_auto_popup = 0
 let g:lsp_signature_help_enabled = 0
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_diagnostics_echo_delay = 0
+let g:lsp_diagnostics_float_cursor = 1
+let g:lsp_diagnostics_float_delay = 0
 let g:lsp_diagnostics_signs_error = {'text': '>>'}
 let g:lsp_diagnostics_signs_warning = {'text': '--'}
 " Mappings
