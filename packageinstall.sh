@@ -1,6 +1,8 @@
 # Download Homebrew Package Manager
 echo "Installing dependencies"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install Mac Developer Tools
 xcode-select --install
@@ -12,7 +14,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # Configure Z-shell
 echo "Copying zshrc file"
 cp .zshrc ~/.zshrc
-source .zshrc
 
 # Install Vim
 brew install vim

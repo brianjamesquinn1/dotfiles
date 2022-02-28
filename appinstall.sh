@@ -1,4 +1,4 @@
 # Install apps via homebrew
-brew cask install flux
-brew cask install rectangle
-brew cask install iterm2
+brew install --cask flux
+brew install --cask rectangle
+brew install --cask iterm2

@@ -7,11 +7,14 @@ export WORKSPACE=$HOME/Projects
 # Make GOPATH directory
 mkdir -p $WORKSPACE/go
 
-# Install OSX Apps
-./appinstall.sh
-
 # Install Packages
 ./packageinstall.sh
 
+# Install OSX Apps
+./appinstall.sh
+
 # Setup vim
 ./vim.sh
+
+# Change dotfiles remote to ssh
+git remote set-url origin git@github.com:brianjamesquinn1/dotfiles.git

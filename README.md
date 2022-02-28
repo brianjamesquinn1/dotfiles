@@ -1,9 +1,26 @@
 ### Installation & Environment Setup ###
-1. Run `./environment.sh`, this will install/setup anything that can be automated
-2. Navigate to the `languages` directory and run the corresponding shell script for
+1. Clone this repo via https (you will be unable to clone via ssh until your
+   keys are generated). This repo will generate keys and change the remote
+   to an ssh connection late.
+2. If ssh/gpg keys are desired for your github account, run `./generatekeys.sh`
+   It is important to run this before setting up the environment otherwise the
+   submodules for vim config won't be able to be pulled.
+3. Run `./environment.sh`, this will install/setup anything that can be automated
+4. Navigate to the `languages` directory and run the corresponding shell script for
    any language you will be working with
-3. If ssh/gpg keys are desired for your github account, run `./generatekeys.sh`
-4. Follow instructions below to configure manual settings
+5. Follow instructions at bottom to configure manual settings
+
+### Overview of appinstall.sh ###
+Install flux, rectangle, and iterm2
+
+### Overview of packageinstall.sh ###
+Installs general command line tools and configures them
+
+### Overview of environment.sh ###
+Creates a default workspace and runs the appinstall, packageinstall, and vim shell scripts
+
+### Overview of generatekeys.sh ###
+Generates SSH and GPG keys which will be output for addition to github.
 
 ### Setting Up Laptop Preferences ###
 1. Configure Flux
@@ -51,16 +68,4 @@
    - `Preferences>Profiles>Keys>Right Option Key` check `Esc+`
    - `Preferences>Profiles>Keys>Hotkey Window` check `A hotkey opens a dedicated window with this profile`
      - Set `Hotkey` to opt-space
-
-### Overview of appinstall.sh ###
-Install flux, rectangle, and iterm2
-
-### Overview of packageinstall.sh ###
-Installs general command line tools and configures them
-
-### Overview of environment.sh ###
-Creates a default workspace and runs the appinstall, packageinstall, and vim shell scripts
-
-### Overview of generatekeys.sh ###
-Generates SSH and GPG keys which will be output for addition to github.
 

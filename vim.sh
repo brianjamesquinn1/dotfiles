@@ -11,7 +11,8 @@ brew install ripgrep
 
 # Configure Vim
 echo "Copying vim files"
+# Make sure submodules are pulled before copying
+git submodule update --init --recursive
 cp .vimrc ~/.vimrc
 mkdir ~/.vim
-cp -r .vim/colors ~/.vim
 cp -r .vim/pack ~/.vim
