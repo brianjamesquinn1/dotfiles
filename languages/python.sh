@@ -1,6 +1,6 @@
 # Install Python
 echo "Installing Python + dependencies"
 brew install python
-sudo easy_install pip
+brew install npm
 
 sudo npm install -g pyright
