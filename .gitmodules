@@ -64,3 +64,6 @@
 [submodule ".vim/pack/plugins/start/vim-jsx-pretty"]
 	path = .vim/pack/plugins/start/vim-jsx-pretty
 	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule ".vim/pack/plugins/start/QFEnter"]
+	path = .vim/pack/plugins/start/QFEnter
+	url = git@github.com:yssl/QFEnter.git
