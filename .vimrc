@@ -106,7 +106,7 @@ cmap PR Git difftool -y
 " List all diffed files in quickfix list from provided branch/commit
 cmap difflist Git difftool --name-only
 " Toggle diff between files in current tab
-nnoremap <silent> <leader>d :call Diff_Toggle()<CR>
+nnoremap <silent> <leader>t :call Diff_Toggle()<CR>
 nnoremap <silent> <leader>e :call Diagnostic_Toggle()<CR>
 
 " Vim-lsp "
@@ -130,7 +130,7 @@ nnoremap <silent> <C-k> :LspImplementation<CR>
 nnoremap <silent> <leader>i :LspPeekImplementation<CR>
 nnoremap <silent> <C-@> :LspReferences<CR>
 nnoremap <silent> <C-n> :LspRename<CR>
-nnoremap <silent> <C-h> :LspHover<CR>
+nnoremap <silent> <leader>h :LspHover<CR>
 nnoremap <silent> ® :LspRestart<CR>
 imap <c-@> <plug>(asyncomplete_force_refresh)
 cmap LspReplace LspRename
