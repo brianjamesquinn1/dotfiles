@@ -108,9 +108,9 @@ cmap PR Git difftool -y
 " Opens all conflicted files in a 3 pane split
 cmap Merge Git mergetool -y
 " pull local (left) changes into merge file
-cmap GDL diffget //2**/<C-r>%
+cmap DGL diffget //2**/<C-r>%
 " pull remote (right) changes into merge file
-cmap GDR diffget //3**/<C-r>%
+cmap DGR diffget //3**/<C-r>%
 " Toggle diff between files in current tab
 nnoremap <silent> <leader>t :call Diff_Toggle()<CR>
 nnoremap <silent> <leader>e :call Diagnostic_Toggle()<CR>
