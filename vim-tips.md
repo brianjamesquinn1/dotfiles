@@ -101,7 +101,10 @@ Fzf                    : file search (recursively searches from current director
 Fzf <directory>        : file search within the given directory (directory can be tab completed) [*] {FZF}
 Rg                     : word search (grep; recursively searches from current directory; ! modifier opens in fullscreen) [*2] {FZF}  
 difflist <hash>        : populate quickfix list with files differing from <hash> (branch or commit) (alias for :Git difftool --name-only <hash>) [*^] {Fugitive}
-PR <branch>            : open all files  differing from <branch> in a different tab in splitview (alias for :Git difftool -y <branch>) [*^] {Fugitive}
+PR <branch>            : open all files differing from <branch> in a different tab in splitview (alias for :Git difftool -y <branch>) [*^] {Fugitive}
+Merge                  : open all files with merge conflicts (alias for Git mergetool -y) [*] {Fugitive}
+DGL                    : pull the changes from the left pane (local) into mergefile (alias for :diffget //2**/<C-r>%) [*^] {Fugitive}
+DGR                    : pull the changes from the right pane (remote) into mergefile (alias for :diffget //3**/<C-r>%) [*^] {Fugitive}
 ctl-f                  : search for word under cursor [*^2] {FZF}  
 ctl-r ctl-w            : insert word under cursor into command  
 tab sp                 : open current window in new tab  

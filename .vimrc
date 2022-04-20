@@ -101,10 +101,16 @@ let g:qf_modifiable = 0
 
 " Fugitive "
 " Mappings
-" Open all diff files in split view from provided branch/commit (use for code review)
-cmap PR Git difftool -y
 " List all diffed files in quickfix list from provided branch/commit
 cmap difflist Git difftool --name-only
+" Open all diff files in split view from provided branch/commit (use for code review)
+cmap PR Git difftool -y
+" Opens all conflicted files in a 3 pane split
+cmap Merge Git mergetool -y
+" pull local (left) changes into merge file
+cmap GDL diffget //2**/<C-r>%
+" pull remote (right) changes into merge file
+cmap GDR diffget //3**/<C-r>%
 " Toggle diff between files in current tab
 nnoremap <silent> <leader>t :call Diff_Toggle()<CR>
 nnoremap <silent> <leader>e :call Diagnostic_Toggle()<CR>
@@ -117,7 +123,7 @@ let g:lsp_signature_help_enabled = 0
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_diagnostics_echo_delay = 0
 let g:lsp_diagnostics_float_cursor = 1
-let g:lsp_diagnostics_float_delay = 0
+let g:lsp_diagnostics_float_delay = 100
 let g:lsp_diagnostics_signs_delay = 0
 let g:lsp_diagnostics_signs_error = {'text': '>>'}
 let g:lsp_diagnostics_signs_warning = {'text': '--'}
@@ -190,6 +196,10 @@ let g:ale_fixers = {
 \    'goimports',
 \  ],
 \  'javascript': [
+\    'prettier',
+\    'eslint',
+\  ],
+\  'typescript': [
 \    'prettier',
 \    'eslint',
 \  ],
