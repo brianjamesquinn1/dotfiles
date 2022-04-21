@@ -97,18 +97,9 @@ Ex                     : enter file explorer in current buffer
 Hex                    : open file explorer in horizontal split (below)  
 Vex!                   : open file explorer in vertical split (right; note ! modifier)  
 Tex                    : open file explorer in new tab
-Fzf                    : file search (recursively searches from current directory; ! modifier opens in fullscreen) [*] {FZF}  
-Fzf <directory>        : file search within the given directory (directory can be tab completed) [*] {FZF}
-Rg                     : word search (grep; recursively searches from current directory; ! modifier opens in fullscreen) [*2] {FZF}  
-difflist <hash>        : populate quickfix list with files differing from <hash> (branch or commit) (alias for :Git difftool --name-only <hash>) [*^] {Fugitive}
-PR <branch>            : open all files differing from <branch> in a different tab in splitview (alias for :Git difftool -y <branch>) [*^] {Fugitive}
-Merge                  : open all files with merge conflicts (alias for Git mergetool -y) [*] {Fugitive}
-DGL                    : pull the changes from the left pane (local) into mergefile (alias for :diffget //2**/<C-r>%) [*^] {Fugitive}
-DGR                    : pull the changes from the right pane (remote) into mergefile (alias for :diffget //3**/<C-r>%) [*^] {Fugitive}
-ctl-f                  : search for word under cursor [*^2] {FZF}  
-ctl-r ctl-w            : insert word under cursor into command  
 tab sp                 : open current window in new tab  
 tabclose               : close all windows in current tab
+windo                  : apply function to all panes in current window/tab (ex. windo set wrap)
 lw                     : open local list (ALE uses to list errors)  
 copen                  : open quickfix list  
 lcl                    : close local list  
@@ -117,6 +108,16 @@ lne                    : go to next local list entry (warning/error)
 cn                     : go to next quickfix entry  
 lp                     : go to previous local list entry (warning/error)  
 cp                     : go to previous quickfix entry  
+ctl-f                  : search for word under cursor [*^2] {FZF}  
+ctl-r ctl-w            : insert word under cursor into command  
+Fzf                    : file search (recursively searches from current directory; ! modifier opens in fullscreen) [*] {FZF}  
+Fzf <directory>        : file search within the given directory (directory can be tab completed) [*] {FZF}
+Rg                     : word search (grep; recursively searches from current directory; ! modifier opens in fullscreen) [*2] {FZF}  
+difflist <hash>        : populate quickfix list with files differing from <hash> (branch or commit) (alias for :Git difftool --name-only <hash>) [*^] {Fugitive}
+PR <branch>            : open all files differing from <branch> in a different tab in splitview (alias for :Git difftool -y <branch>) [*^] {Fugitive}
+Merge                  : open all files with merge conflicts (alias for Git mergetool -y) [*] {Fugitive}
+DGL                    : pull the changes from the left pane (local) into mergefile (alias for :diffget //2**/<C-r>%) [*^] {Fugitive}
+DGR                    : pull the changes from the right pane (remote) into mergefile (alias for :diffget //3**/<C-r>%) [*^] {Fugitive}
 cd %:h                 : change netrw to current directory (helpful to search with Fzf/Rg in only the current directory)
 cd -                   : change netrw to previous directory (helpful to change Fzf/Rg back to global search after using the above
 ```
