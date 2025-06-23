@@ -36,39 +36,43 @@ Generates SSH and GPG keys which will be output for addition to github.
 2. `System Preferences>Keyboard>Keyboard`
    - Set `Key Repeat` to the fastest setting
    - Set `Delay Until Repeat` to the shortest setting
-3. `System Preferences>Keyboard>Keyboard>Modifier Keys...`
+3. `System Preferences>Keyboard>Shortcuts>Modifier Keys...`
    - Set `Caps Lock Key` to `Escape`
 4. `System Preferences>Keyboard>Shortcuts>Mission Control`
    - Set `Move left a space` to opt-left
    - Set `Move right a space` to opt-right
-5. `System Preferences>Mission Control`
+5. `System Preferences>Desktop & Dock>Mission Control`
    - Uncheck `Automatically rearrange spaces based on most recent use`
+6. `System Preferences>Desktop & Dock`
+   - Set Size to Small
+   - Set Magnification to Small
+   - Check `Automatically hide and show the Dock`
 
 ### Setting Up Terminal Environment ###
 1. Configure iTerm
    - `Preferences>General>Closing` uncheck `Confirm closing multiple sessions`
-   - `Preferences>General>Closing` uncheck `Confirm "Quit iTerm2" if windows open`
-   - `Preferences>Appearance>Tabs` set `Tab bar location` to `Bottom`
+   - `Preferences>General>Closing` uncheck `Confirm "Quit iTerm2"`
+   - `Preferences>Appearance>General` set `Tab bar location` to `Bottom`
    - `Preferences>Appearance>Tabs` uncheck `Show tab bar in fullscreen`
    - `Preferences>Appearance>Window` check `Hide scrollbars`
    - `Preferences>Profiles>General` set `Send text at start:` to `source ~/.zshrc`
-   - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #E8D5A9 (#EFE1C2 to match gruvbox)
-   - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #16222D (#282828 to match gruvbox)
-   - `Preferences>Profiles>Colors>Basic Colors` set `Bold` to #DFBD22
-   - `Preferences>Profiles>Colors>Basic Colors` set `Selection` to #411916
-   - `Preferences>Profiles>Colors>Basic Colors` set `Selected text` to #5FFA68
-   - `Preferences>Profiles>Colors>Cursor Colors` set `Cursor` to #FFCC66
-   - `Preferences>Profiles>Colors>Cursor Colors` set `Cursor text` to #E8D5A9 (#EFE1C2 to match gruvbox)
-   - `Preferences>Profiles>Colors>Cursor Colors` set `Cursor guide` to #8DBAC9
-   - `Preferences>Profiles>Text>Cursor` check `Blinking Cursor`
+   - `Preferences>Profiles>Colors>Defaults` set `Foreground` to #E8D5A9 (#EFE1C2 to match gruvbox)
+   - `Preferences>Profiles>Colors>Defaults` set `Background` to #16222D (#282828 to match gruvbox)
+   - `Preferences>Profiles>Colors>Cursor` set `Foreground` to #E8D5A9 (#EFE1C2 to match gruvbox)
+   - `Preferences>Profiles>Colors>Cursor` set `Background` to #FFCC66
+   - `Preferences>Profiles>Colors>Cursor Guide` set `Cursor Guide` to #8DBAC9
+   - `Preferences>Profiles>Colors>Bold` set `Bold` to #DFBD22
+   - `Preferences>Profiles>Colors>Basic Colors` set `Foreground` to #5FFA68
+   - `Preferences>Profiles>Colors>Basic Colors` set `Background` to #411916
+   - `Preferences>Profiles>Text>Cursor` check `Blink`
    - `Preferences>Profiles>Text>Font` change font to `14pt Menlo Regular`
-   - `Preferences>Profiles>Window>Window Appearance` slide `Transparency` to 1/4th
-   - `Preferences>Profiles>Window>Window Appearance` slide `Blur` to 1/8th
+   - `Preferences>Profiles>Window` slide `Transparency` to 1/4th
+   - `Preferences>Profiles>Window` slide `Blur` to 1/8th
    - `Preferences>Profiles>Window>Settings for New Windows` set `Style` to `No Title Bar`
+   - `Preferences>Profiles>Window>Settings for New Windows` set `Screen` to `Screen with Cursor`
    - `Preferences>Profiles>Terminal>Scrollback Buffer` check `Unlimited scrollback`
    - `Preferences>Profiles>Terminal>Notifications` check `Silence bell`
    - `Preferences>Profiles>Keys>Left Option Key` check `Esc+`
    - `Preferences>Profiles>Keys>Right Option Key` check `Esc+`
    - `Preferences>Profiles>Keys>Hotkey Window` check `A hotkey opens a dedicated window with this profile`
      - Set `Hotkey` to opt-space
-
