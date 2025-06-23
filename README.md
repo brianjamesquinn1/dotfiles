@@ -14,7 +14,7 @@
 6. Follow instructions at bottom to configure manual settings
 
 ### Overview of appinstall.sh ###
-Install flux, rectangle, and iterm2
+Install flux, rectangle, iterm2, slack, and spotify
 
 ### Overview of packageinstall.sh ###
 Installs general command line tools and configures them
