@@ -7,7 +7,7 @@ SSH_KEY=`cat ~/.ssh/id_rsa.pub`
 echo "Generating GPG Key"
 brew install gnupg
 gpg --full-generate-key
-KEY_HASH=`gpg --list-secret-keys --keyid-format LONG`
+KEY_HASH=`gpg --list-secret-keys --keyid-format LONG | awk '/^ / && length($1) == 40 {print $1}'`
 GPG_KEY=`gpg --armor --export $KEY_HASH`
 
 # Return Keys for input to git
