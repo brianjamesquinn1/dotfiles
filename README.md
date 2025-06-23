@@ -1,14 +1,17 @@
 ### Installation & Environment Setup ###
-1. Clone this repo via https (you will be unable to clone via ssh until your
+1. Install Homebrew. Try `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`,
+   otherwise https://brew.sh/ will have the up to date script.
+2. Clone this repo via https (you will be unable to clone via ssh until your
    keys are generated). This repo will generate keys and change the remote
    to an ssh connection late.
-2. If ssh/gpg keys are desired for your github account, run `./generatekeys.sh`
+3. If ssh/gpg keys are desired for your github account, run `./generatekeys.sh`
    It is important to run this before setting up the environment otherwise the
-   submodules for vim config won't be able to be pulled.
-3. Run `./environment.sh`, this will install/setup anything that can be automated
-4. Navigate to the `languages` directory and run the corresponding shell script for
+   submodules for vim config won't be able to be pulled. DON'T FORGET TO INPUT
+   THESE KEYS INTO YOUR GITHUB ACCOUNT!
+4. Run `./environment.sh`, this will install/setup anything that can be automated
+5. Navigate to the `languages` directory and run the corresponding shell script for
    any language you will be working with
-5. Follow instructions at bottom to configure manual settings
+6. Follow instructions at bottom to configure manual settings
 
 ### Overview of appinstall.sh ###
 Install flux, rectangle, and iterm2
