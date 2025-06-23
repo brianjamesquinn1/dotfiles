@@ -16,4 +16,4 @@ echo "SSH KEY:"
 echo $SSH_KEY
 echo "GPG KEY:"
 echo $GPG_KEY
-
+echo "\nMake sure you added the above keys to Github!"
