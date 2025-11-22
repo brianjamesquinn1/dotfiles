@@ -76,3 +76,4 @@ Generates SSH and GPG keys which will be output for addition to github.
    - `Preferences>Profiles>Keys>Right Option Key` check `Esc+`
    - `Preferences>Profiles>Keys>Hotkey Window` check `A hotkey opens a dedicated window with this profile`
      - Set `Hotkey` to opt-space
+  - `Preferences>Profiles>Keys>Hotkey Window>Configure Hotkey Window` uncheck `Pin hotkey window`
