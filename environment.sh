@@ -14,6 +14,7 @@ mkdir -p $WORKSPACE/go
 ./appinstall.sh
 
 # Setup vim
+cd ./editors/vim
 ./vim.sh
 
 # Change dotfiles remote to ssh

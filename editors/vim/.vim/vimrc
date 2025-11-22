@@ -33,7 +33,10 @@ set nowrap
 
 " Gruvbox Colors "
 let g:gruvbox_inverse = 0
-colorscheme gruvbox
+
+" Randomize Colorscheme "
+let my_colorschemes = ['everforest', 'fahrenheit', 'gruvbit', 'gruvbox', 'gruvbox-material', 'monokai', 'monokai_pro', 'sonokai']
+execute 'colorscheme' my_colorschemes[rand() % (len(my_colorschemes) - 1 ) ]
 
 " Generic Colors "
 highlight RipgrepBlue cterm=none ctermfg=14   ctermbg=none
@@ -42,6 +45,7 @@ highlight DiffDelete  cterm=none ctermfg=52   ctermbg=52
 highlight DiffChange  cterm=none ctermfg=none ctermbg=none
 highlight DiffText    cterm=none ctermfg=220  ctermbg=240
 highlight Search      cterm=none ctermfg=14   ctermbg=none
+
 " Persist After ColorScheme Change
 autocmd ColorScheme * highlight RipgrepBlue cterm=none ctermfg=14   ctermbg=none
 autocmd ColorScheme * highlight DiffAdd     cterm=none ctermfg=118  ctermbg=none
