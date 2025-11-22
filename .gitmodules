@@ -145,3 +145,6 @@
 [submodule "editors/vim/.vim/pack/plugins/start/vim-signify"]
 	path = editors/vim/.vim/pack/plugins/start/vim-signify
 	url = git@github.com:mhinz/vim-signify.git
+[submodule "editors/vim/.vim/pack/plugins/start/vim-gitgutter"]
+	path = editors/vim/.vim/pack/plugins/start/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
