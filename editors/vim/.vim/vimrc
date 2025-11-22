@@ -241,11 +241,23 @@ let g:ale_fixers = {
       \  ],
       \ }
 let g:ale_fix_on_save = 1
+let g:ale_detail_to_floating_preview=1
 let g:ale_elixir_elixir_ls_release = $WORKSPACE.'/elixir-ls/release'
 let g:ale_virtualtext_cursor = 'disable'
 let g:ale_echo_msg_format = '%s'
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:ale_sign_info = ' ?'
+let g:ale_sign_style_error = '>>'
+let g:ale_sign_style_warning = '--'
+
 
 " Mappings
 nnoremap <silent> <C-a> :ALEToggle<CR>
+nnoremap <silent> <C-e> :ALEDetail<CR>
 inoremap <silent> <C-a> <C-\><C-O>:ALEToggle<CR>
-nnoremap <silent> <C-h> :ALEHover<CR>
+
+" GitGutter "
+" Mappings
+nnoremap <silent> <C-s> :GitGutterToggle<CR>
+inoremap <silent> <C-s> <C-\><C-O>:GitGutterToggle<CR>
