@@ -21,6 +21,7 @@ bindkey '^[OB' history-beginning-search-forward
 
 # Z-shell settings
 export ZSH=/Users/$USER/.oh-my-zsh
+setopt globdots
 #ZSH_THEME="jnrowe"
 #ZSH_THEME="miloshadzic"
 #ZSH_THEME="mrtazz"

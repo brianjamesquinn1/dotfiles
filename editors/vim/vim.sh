@@ -11,6 +11,10 @@ brew install fzf
 echo "Installing ripgrep"
 brew install ripgrep
 
+# Install Bat (dep for rendering fzf/rg properly)
+echo "Installing bat"
+brew install bat
+
 # Configure Vim
 echo "Copying vim files"
 # Make sure submodules are pulled before copying

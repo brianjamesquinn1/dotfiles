@@ -39,6 +39,7 @@ let g:gruvbox_inverse = 0
 " Randomize Colorscheme "
 let colorschemes = ['everforest', 'gruvbit', 'gruvbox', 'gruvbox-material', 'monokai', 'monokai_pro', 'sonokai']
 execute 'colorscheme' colorschemes[rand() % (len(colorschemes) - 1 ) ]
+let $BAT_THEME = g:colors_name
 
 " Generic Colors "
 highlight RipgrepBlue cterm=none ctermfg=14   ctermbg=none
@@ -67,9 +68,8 @@ function! Diff_Toggle()
 
 " Commands "
 command! -bang -nargs=0 DiffToggle call Diff_Toggle()
-command! -bang -nargs=* -complete=dir Fzf call fzf#vim#files(<q-args>, <bang>0)
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4.. --color hl:14,hl+:214'}, <bang>0)
 command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
+command! HelpTags packloadall | silent! helptags ALL
 
 " Mappings "
 " Enter on pop up menu selects
@@ -115,28 +115,34 @@ let g:lightline#gitdiff#indicator_added = "+"
 let g:lightline#gitdiff#indicator_deleted = "-"
 let g:lightline#gitdiff#indicator_modified = "\u26cf"
 
-" Ripgrep "
+" Ripgrep/Fzf "
+" Settings
+let g:fzf_vim = {}
+let g:fzf_vim.files_options = '--color hl:14,hl+:214'
+let g:fzf_vim.rg_options = '--delimiter : --nth 4.. --color hl:14,hl+:214'
 " Mappings
+nnoremap <silent> <Space>p :Files<CR>
+nnoremap <silent> <Space>f :Rg<CR>
 " RG cursor
 nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
-
-" FZF "
-" Settings "
-let g:fzf_colors =
-      \ { 'hl': ['fg', 'RipgrepBlue'],
-      \  'bg+': ['bg', 'PMenu'],
-      \  'hl+': ['fg', 'CursorLineNr'] }
 
 " Quickfix Reflector "
 " Settings
 let g:qf_modifiable = 0
 
 " Fugitive "
+" Settings
+" Autoupdate git window
+autocmd BufWritePost,BufDelete * if bufexists('fugitive://') | execute 'Git' | endif
 " Mappings
+" Open furgitive git status window
+nnoremap <Space>g :belowright Git<bar>:resize 10<CR>
 " List all diffed files in quickfix list from provided branch/commit
-cmap difflist Git difftool --name-only
+nnoremap <Space>d :Gdiff<Bar>wincmd p<CR>
 " Open all diff files in split view from provided branch/commit (use for code review)
 cmap PR Git difftool -y
+" Lists all changed files in quickfix list
+cmap difflist Git difftool --name-only
 " Opens all conflicted files in a 3 pane split
 cmap Merge Git mergetool -y
 " pull local (left) changes into merge file
