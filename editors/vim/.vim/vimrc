@@ -136,9 +136,9 @@ let g:qf_modifiable = 0
 autocmd BufWritePost,BufDelete * if bufexists('fugitive://') | execute 'Git' | endif
 " Mappings
 " Open furgitive git status window
-nnoremap <Space>g :belowright Git<bar>:resize 10<CR>
+nnoremap <silent> <Space>g :belowright Git<bar>:resize 10<CR>
 " List all diffed files in quickfix list from provided branch/commit
-nnoremap <Space>d :Gdiff<Bar>wincmd p<CR>
+nnoremap <silent> <Space>d :Gdiff<Bar>wincmd p<CR>
 " Open all diff files in split view from provided branch/commit (use for code review)
 cmap PR Git difftool -y
 " Lists all changed files in quickfix list
@@ -261,6 +261,9 @@ let g:ale_sign_style_warning = '--'
 " Mappings
 nnoremap <silent> <C-a> :ALEToggle<CR>
 nnoremap <silent> <C-e> :ALEDetail<CR>
+nnoremap <silent>]e :ALENextWrap<CR>
+nnoremap <silent>[e :ALEPreviousWrap<CR>
+nnoremap <silent> <Space>e :ALEPopulateQuickfix<CR>:copen<CR>
 inoremap <silent> <C-a> <C-\><C-O>:ALEToggle<CR>
 
 " GitGutter "
