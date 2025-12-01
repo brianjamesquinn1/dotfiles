@@ -28,6 +28,9 @@ brew install ripgrep
 echo "Installing tmux"
 brew install tmux
 
+# Install calude code
+curl -fsSL https://claude.ai/install.sh | bash
+
 # Configure tmux
 echo "Copying tmux.conf file"
 cp .tmux.conf ~/.tmux.conf
