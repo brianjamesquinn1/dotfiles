@@ -29,7 +29,7 @@ echo "Installing tmux"
 brew install tmux
 
 # Install calude code
-curl -fsSL https://claude.ai/install.sh | bash
+brew install --cask claude-code
 
 # Configure tmux
 echo "Copying tmux.conf file"
