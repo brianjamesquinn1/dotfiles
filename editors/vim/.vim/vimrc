@@ -57,129 +57,13 @@ autocmd ColorScheme * highlight DiffChange  cterm=none ctermfg=none ctermbg=none
 autocmd ColorScheme * highlight DiffText    cterm=none ctermfg=220  ctermbg=240
 autocmd ColorScheme * highlight Search      cterm=none ctermfg=14   ctermbg=none
 
-" Functions "
-function! Diff_Toggle()
-    if &diff
-        diffoff
-    else
-        diffthis
-    endif
-:endfunction
-
-" Commands "
-command! -bang -nargs=0 DiffToggle call Diff_Toggle()
-command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
-command! HelpTags packloadall | silent! helptags ALL
-
-" Mappings "
-" Enter on pop up menu selects
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-" Set highlight on search
-nnoremap <silent> <leader>/ :set hlsearch!<CR>
-" Search for word under cursor in file
-nnoremap <silent> <leader>f /<C-r><C-w><CR>N :set hlsearch<CR>
-
-" Plugins "
-" Lightline "
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-let g:lightline.component_expand = {
-      \  'gitdiff': 'lightline#gitdiff#get',
-      \  'linter_checking': 'lightline#ale#checking',
-      \  'linter_infos': 'lightline#ale#infos',
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
-      \ }
-let g:lightline.component_function = {
-      \  'gitbranch': 'FugitiveHead' }
-let g:lightline.component_type = {
-      \  'linter_checking': 'right',
-      \  'linter_infos': 'right',
-      \  'linter_warnings': 'warning',
-      \  'linter_errors': 'error',
-      \  'linter_ok': 'right',
-      \ }
-let g:lightline.active = {
-      \ 'left': [ [ 'mode', 'paste' ],
-      \           [ 'gitbranch' ],
-      \           [ 'gitdiff', 'filename', 'readonly', 'modified' ] ],
-      \ 'right': [ [ 'linter_errors', 'linter_warnings', 'linter_ok' ],
-      \            [ 'lineinfo' ],
-      \            [ 'percent' ] ] }
-let g:lightline#ale#indicator_warnings = "\u23f5"
-let g:lightline#ale#indicator_errors = "\u2716"
-let g:lightline#ale#indicator_ok = "\u2713"
-let g:lightline#gitdiff#indicator_added = "+"
-let g:lightline#gitdiff#indicator_deleted = "-"
-let g:lightline#gitdiff#indicator_modified = "\u26cf"
-
-" Ripgrep/Fzf "
-" Settings
-let g:fzf_vim = {}
-let g:fzf_vim.files_options = '--color hl:14,hl+:214'
-let g:fzf_vim.rg_options = '--delimiter : --nth 4.. --color hl:14,hl+:214'
-" Mappings
-nnoremap <silent> <Space>p :Files<CR>
-nnoremap <silent> <Space>f :Rg<CR>
-" RG cursor
-nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
-
-" Quickfix Reflector "
-" Settings
-let g:qf_modifiable = 0
-
-" Fugitive "
-" Settings
-" Autoupdate git window
-autocmd BufWritePost,BufDelete * if bufexists('fugitive://') | execute 'Git' | endif
-" Mappings
-" Open furgitive git status window
-nnoremap <silent> <Space>g :belowright Git<bar>:resize 10<CR>
-" List all diffed files in quickfix list from provided branch/commit
-nnoremap <silent> <Space>d :Gdiff<Bar>wincmd p<CR>
-" Open all diff files in split view from provided branch/commit (use for code review)
-cmap PR Git difftool -y
-" Lists all changed files in quickfix list
-cmap difflist Git difftool --name-only
-" Opens all conflicted files in a 3 pane split
-cmap Merge Git mergetool -y
-" pull local (left) changes into merge file
-cmap DGL diffget //2**/<C-r>%
-" pull remote (right) changes into merge file
-cmap DGR diffget //3**/<C-r>%
-" Toggle diff between files in current tab
-nnoremap <silent> <leader>t :call Diff_Toggle()<CR>
-
-" Vim-lsp "
+" Plugin Settings "
+" ALE
 " TODO figure out how to only lint on save
-" Settings
-let g:asyncomplete_auto_popup = 0
-let g:lsp_signature_help_enabled = 0
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_diagnostics_echo_delay = 0
-let g:lsp_diagnostics_float_cursor = 1
-let g:lsp_diagnostics_float_delay = 100
-let g:lsp_diagnostics_signs_delay = 0
-let g:lsp_diagnostics_signs_error = {'text': '>>'}
-let g:lsp_diagnostics_signs_warning = {'text': '--'}
-let g:lsp_document_code_action_signs_enabled = 0
-let g:lsp_document_code_action_signs_delay = 0
-" Mappings
-nnoremap <silent> <C-p> :LspDefinition<CR>
-nnoremap <silent> <leader>d :LspPeekDefinition<CR>
-nnoremap <silent> <C-k> :LspImplementation<CR>
-nnoremap <silent> <leader>i :LspPeekImplementation<CR>
-nnoremap <silent> <C-@> :LspReferences<CR>
-nnoremap <silent> <C-n> :LspRename<CR>
-nnoremap <silent> <leader>h :LspHover<CR>
-nnoremap <silent> ® :LspRestart<CR>
-imap <c-@> <plug>(asyncomplete_force_refresh)
-cmap LspReplace LspRename
-
-" ALE "
-" Settings
+let g:ale_detail_to_floating_preview=1
+let g:ale_echo_msg_format = '%s'
+let g:ale_elixir_elixir_ls_release = $WORKSPACE.'/elixir-ls/release'
+let g:ale_fix_on_save = 1
 let g:ale_lint_delay = 0
 let g:ale_lint_diff = 1
 let g:ale_lint_on_enter = 0
@@ -188,6 +72,12 @@ let g:ale_lint_on_filetype_changed = 0
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_sign_error = '>>'
+let g:ale_sign_info = ' ?'
+let g:ale_sign_style_error = '>>'
+let g:ale_sign_style_warning = '--'
+let g:ale_sign_warning = '--'
+let g:ale_virtualtext_cursor = 'disable'
 let g:ale_linters = {
       \  'cpp': [
       \    'clang',
@@ -246,27 +136,198 @@ let g:ale_fixers = {
       \    'rustfmt',
       \  ],
       \ }
-let g:ale_fix_on_save = 1
-let g:ale_detail_to_floating_preview=1
-let g:ale_elixir_elixir_ls_release = $WORKSPACE.'/elixir-ls/release'
-let g:ale_virtualtext_cursor = 'disable'
-let g:ale_echo_msg_format = '%s'
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
-let g:ale_sign_info = ' ?'
-let g:ale_sign_style_error = '>>'
-let g:ale_sign_style_warning = '--'
 
+" Fugitive
+" Autoupdate git window
+autocmd BufWritePost,BufDelete * if bufexists('fugitive://') | execute 'Git' | endif
 
-" Mappings
-nnoremap <silent> <C-a> :ALEToggle<CR>
-nnoremap <silent> <C-e> :ALEDetail<CR>
+" Fzf/Ripgrep
+let g:fzf_vim = {}
+let g:fzf_vim.files_options = '--color hl:14,hl+:214'
+let g:fzf_vim.rg_options = '--delimiter : --nth 4.. --color hl:14,hl+:214'
+
+" Lightline "
+let g:lightline = {
+      \  'colorscheme': 'wombat',
+      \ }
+let g:lightline.component_expand = {
+      \  'gitdiff': 'lightline#gitdiff#get',
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_function = {
+      \  'gitbranch': 'FugitiveHead' }
+let g:lightline.component_type = {
+      \  'linter_checking': 'right',
+      \  'linter_infos': 'right',
+      \  'linter_warnings': 'warning',
+      \  'linter_errors': 'error',
+      \  'linter_ok': 'right',
+      \ }
+let g:lightline.active = {
+      \ 'left': [ [ 'mode', 'paste' ],
+      \           [ 'gitbranch' ],
+      \           [ 'gitdiff', 'filename', 'readonly', 'modified' ] ],
+      \ 'right': [ [ 'linter_errors', 'linter_warnings', 'linter_ok' ],
+      \            [ 'lineinfo' ],
+      \            [ 'percent' ] ] }
+let g:lightline#ale#indicator_errors = "\u2716"
+let g:lightline#ale#indicator_ok = "\u2713"
+let g:lightline#ale#indicator_warnings = "\u23f5"
+let g:lightline#gitdiff#indicator_added = "+"
+let g:lightline#gitdiff#indicator_deleted = "-"
+let g:lightline#gitdiff#indicator_modified = "\u26cf"
+
+" Lsp (vim-lsp)
+" TODO figure out how to only lint on save
+autocmd User lsp_float_opened
+      \ call popup_setoptions(lsp#ui#vim#output#getpreviewwinid(), {
+      \  'borderchars': ['─','│','─','│','┌','┐','┘','└'],
+      \ })
+let g:asyncomplete_auto_popup = 0
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_echo_delay = 0
+let g:lsp_diagnostics_float_cursor = 1
+let g:lsp_diagnostics_float_delay = 100
+let g:lsp_diagnostics_signs_delay = 0
+let g:lsp_diagnostics_signs_error = {'text': '>>'}
+let g:lsp_diagnostics_signs_warning = {'text': '--'}
+let g:lsp_document_code_action_signs_delay = 0
+let g:lsp_document_code_action_signs_enabled = 0
+let g:lsp_signature_help_enabled = 0
+
+" Quickfix Reflector 
+let g:qf_modifiable = 0
+
+" Functions "
+function! Close_Diff()
+  if (!&diff && !getbufvar('#', '&diff')) || (bufname('%') !~ '^fugitive:' && bufname('#') !~ '^fugitive:')
+    echom "Not in diff view."
+    return
+  endif
+
+  " Close current buffer if alternate is not fugitive but current one is.
+  if bufname('%') =~ '^fugitive:' && bufname('#') !~ '^fugitive:' 
+    if bufwinnr("#") == -1
+      b #
+      bd #
+    else
+      bd
+    endif
+  else
+    bd #
+  endif
+endfunction
+
+function! Diff_Toggle()
+    if &diff
+        call Close_Diff()
+    else
+        Gdiff
+        wincmd p
+    endif
+endfunction
+
+" Commands "
+command! -bang -nargs=0 DiffToggle call Diff_Toggle()
+command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
+command! HelpTags packloadall | silent! helptags ALL
+
+" Mappings "
+
+" Originally mapped to group similar functionality (ie all LSP functions
+" interact with CTRL), but have now changed so the mappings group similar
+" interaction patterns (ie does it open new buffers? floating window? etc)
+
+" General Pattern
+" ]/[ mappings navigate in search
+" <leader> mappings do in buffer operations
+" <Space> mappings open new buffers/fullscreen floating windows
+" <C-*> (ctrl) mappings jump buffers, do under cursor operations,
+" and replace <leader>/<Space> in insert mode operations
+
+" Open all diff files in split view from provided branch/commit (use for code review)
+cmap PR Git difftool -y
+" Lists all changed files in quickfix list
+cmap difflist Git difftool --name-only
+" Opens all conflicted files in a 3 pane split
+cmap Merge Git mergetool -y
+" Pull local (left) changes into merge file
+cmap DGL diffget //2**/<C-r>%
+" Pull remote (right) changes into merge file
+cmap DGR diffget //3**/<C-r>%
+" Map common mistype for symbol renaming
+cmap LspReplace LspRename
+" Enter on pop up menu selects
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+" / - Highlight
+" Set highlight on buffer search
+nnoremap <silent> <leader>/ :set hlsearch!<CR>
+
+" A - Alerts
+" Toggle gutter diagnostics
+nnoremap <silent> <leader>d :ALEToggle<CR>
+inoremap <silent> <C-d> <C-\><C-O>:ALEToggle<CR>
+
+" D - Diff/Definition
+" Pop up definition
+nnoremap <silent> <leader>d :LspPeekDefinition<CR>
+" Open diff buffer
+nnoremap <silent> <Space>d :DiffToggle<CR>
+" Jump to definition
+nnoremap <silent> <C-d> :LspDefinition<CR>
+
+" E - Error
+" Jump to next error/warning
 nnoremap <silent>]e :ALENextWrap<CR>
+" Jump to previous error/warning
 nnoremap <silent>[e :ALEPreviousWrap<CR>
+" Pop up full error
+nnoremap <silent> <leader>e :ALEDetail<CR>
+" Open quickfix with diagnostics (errors) listed
 nnoremap <silent> <Space>e :ALEPopulateQuickfix<CR>:copen<CR>
-inoremap <silent> <C-a> <C-\><C-O>:ALEToggle<CR>
 
-" GitGutter "
-" Mappings
-nnoremap <silent> <C-s> :GitGutterToggle<CR>
-inoremap <silent> <C-s> <C-\><C-O>:GitGutterToggle<CR>
+" F - Find
+" Search for word under cursor in file
+nnoremap <silent> <leader>f /<C-r><C-w><CR>N :set hlsearch<CR>
+" Open ripgrep search
+nnoremap <silent> <Space>f :Rg<CR>
+" Ripgrep word under cursor
+nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
+
+" G - Git
+" Toggle gutter diff
+nnoremap <silent> <leader>g :GitGutterToggle<CR>
+inoremap <silent> <C-g> <C-\><C-O>:GitGutterToggle<CR>
+" Open fugitive git status window
+nnoremap <silent> <Space>g :belowright Git<bar>:resize 10<CR>
+
+" P - Project
+" Open file search
+nnoremap <silent> <Space>p :Files<CR>
+
+" H - Hover details
+" Pop up LSP hover information
+nnoremap <silent> <leader>h :LspHover<CR>
+
+" I - Implementation
+" Pop up implementation
+nnoremap <silent> <leader>i :LspPeekImplementation<CR>
+" Jump to implementation
+nnoremap <silent> <Space>i :LspImplementation<CR>
+nnoremap <silent> <C-i> :LspImplementation<CR>
+
+" R - Rename/References/Restart
+" Restart the LSP server
+nnoremap <silent> <leader>r :LspRestart<CR>
+" Open references
+nnoremap <silent> <Space>r :LspReferences<CR>
+" Symbol rename (lsp identified occurences)
+nnoremap <silent> <C-r> :LspRename<CR>
+
+" Space - Completion (ie 'blank')
+" Trigger autocompletion
+imap <c-@> <plug>(asyncomplete_force_refresh)
