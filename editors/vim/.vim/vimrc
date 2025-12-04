@@ -334,7 +334,11 @@ nnoremap <silent> <leader>i :LspPeekImplementation<CR>
 nnoremap <silent> <Space>i :LspImplementation<CR>
 nnoremap <silent> <C-i> :LspImplementation<CR>
 
-" N - Name
+" N - Next/Name
+" Next item in quickfix list
+nnoremap <silent>]n :cn<CR>
+" Previous item in quickfix list
+nnoremap <silent>[n :cp<CR>
 " Symbol (re)name (lsp identified occurences)
 nnoremap <silent> <leader>n /<C-r><C-w><CR>N :LspRename<CR>
 nnoremap <silent> <C-n> :LspRename<CR>
