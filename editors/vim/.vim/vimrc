@@ -263,20 +263,24 @@ command! HelpTags packloadall | silent! helptags ALL
 " <C-*> (ctrl) mappings jump buffers, do under cursor operations,
 " and replace <leader>/<Space> in insert mode operations
 
+" Quit tab
+cnoreabbrev <expr> qt (getcmdtype() == ':' ? 'tabclose' : 'qt')
 " Open all diff files in split view from provided branch/commit (use for code review)
-cmap PR Git difftool -y
+cnoreabbrev <expr> PR (getcmdtype() == ':' && getcmdline() ==# 'PR' ? 'Git difftool -y' : 'PR')
 " Lists all changed files in quickfix list
-cmap difflist Git difftool --name-only
+cnoreabbrev <expr> difflist (getcmdtype() == ':' && getcmdline() ==# 'difflist' ? 'Git difftool --name-only' : 'difflist')
 " Opens all conflicted files in a 3 pane split
-cmap Merge Git mergetool -y
+cnoreabbrev <expr> Merge (getcmdtype() == ':' && getcmdline() ==# 'Merge' ? 'Git mergetool -y' : 'Merge')
 " Pull local (left) changes into merge file
-cmap DGL diffget //2**/<C-r>%
+cnoreabbrev <expr> DGL (getcmdtype() == ':' && getcmdline() ==# 'DGL' ? 'diffget //2**/<C-r>%' : 'DGL')
 " Pull remote (right) changes into merge file
-cmap DGR diffget //3**/<C-r>%
+cnoreabbrev <expr> DGR (getcmdtype() == ':' && getcmdline() ==# 'DGR' ? 'diffget //3**/<C-r>%' : 'DGR')
 " Map common mistype for symbol renaming
-cmap LspReplace LspRename
-" Enter on pop up menu selects
+cnoreabbrev <expr> LspReplace (getcmdtype() == ':' && getcmdline() ==# 'LspReplace' ? 'LspRename' : 'LspReplace')
+
+" Enter - select from popup menu
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
 " / - Highlight
 " Set highlight on buffer search
 nnoremap <silent> <leader>/ :set hlsearch!<CR>
