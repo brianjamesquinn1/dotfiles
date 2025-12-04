@@ -1,6 +1,8 @@
 # Aliases
+alias cim='vim' # common typo I make
 alias identity='git config --global user.name && git config --global user.email'
 alias im='vim' # for some reason iterm/tmux seems to occasionally drop first character input resulting in this typo a surprisingly frequently
+alias it='git' # same as above
 alias please='sudo $(fc -ln -1)'
 alias pro='git config --global user.name "Brian Quinn"
 git config --global user.email "brianjamesquinn1@gmail.com"

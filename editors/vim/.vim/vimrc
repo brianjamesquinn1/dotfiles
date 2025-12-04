@@ -27,11 +27,12 @@ set mouse=a
 
 " Visual "
 set background=dark
+set laststatus=2
+set noequalalways
+set noshowmode
+set nowrap
 set number
 set ruler
-set nowrap
-set laststatus=2
-set noshowmode
 
 " Gruvbox Colors "
 let g:gruvbox_inverse = 0
@@ -231,8 +232,21 @@ function! Diff_Toggle()
     endif
 endfunction
 
+function! Git_Toggle() abort
+  for l:winnr in range(1, winnr('$'))
+    if !empty(getwinvar(l:winnr, 'fugitive_status'))
+      exe l:winnr 'close'
+      return
+    endif
+  endfor
+  belowright keepalt Git
+  resize 10
+  setlocal winfixheight
+endfunction
+
 " Commands "
 command! -bang -nargs=0 DiffToggle call Diff_Toggle()
+command! -bang -nargs=0 GitToggle call Git_Toggle()
 command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
 command! HelpTags packloadall | silent! helptags ALL
 
@@ -272,6 +286,10 @@ nnoremap <silent> <leader>/ :set hlsearch!<CR>
 nnoremap <silent> <leader>d :ALEToggle<CR>
 inoremap <silent> <C-d> <C-\><C-O>:ALEToggle<CR>
 
+" C - Close
+" Closes quickfix window (note not safe to remap for ctrl-C)
+nnoremap <silent> <Space>c :ccl<CR>
+
 " D - Diff/Definition
 " Pop up definition
 nnoremap <silent> <leader>d :LspPeekDefinition<CR>
@@ -303,11 +321,7 @@ nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
 nnoremap <silent> <leader>g :GitGutterToggle<CR>
 inoremap <silent> <C-g> <C-\><C-O>:GitGutterToggle<CR>
 " Open fugitive git status window
-nnoremap <silent> <Space>g :belowright Git<bar>:resize 10<CR>
-
-" P - Project
-" Open file search
-nnoremap <silent> <Space>p :Files<CR>
+nnoremap <silent> <Space>g :GitToggle<CR>
 
 " H - Hover details
 " Pop up LSP hover information
@@ -320,13 +334,39 @@ nnoremap <silent> <leader>i :LspPeekImplementation<CR>
 nnoremap <silent> <Space>i :LspImplementation<CR>
 nnoremap <silent> <C-i> :LspImplementation<CR>
 
-" R - Rename/References/Restart
+" N - Name
+" Symbol (re)name (lsp identified occurences)
+nnoremap <silent> <leader>n /<C-r><C-w><CR>N :LspRename<CR>
+nnoremap <silent> <C-n> :LspRename<CR>
+
+" P - Project
+" Open file search
+nnoremap <silent> <Space>p :Files<CR>
+
+" R - References/Restart
 " Restart the LSP server
 nnoremap <silent> <leader>r :LspRestart<CR>
 " Open references
 nnoremap <silent> <Space>r :LspReferences<CR>
-" Symbol rename (lsp identified occurences)
-nnoremap <silent> <C-r> :LspRename<CR>
+nnoremap <silent> <C-r> :LspReferences<CR>
+
+" U - Update/Undo
+" Reload (update) buffer with any changes
+nnoremap <silent> <leader>u :e<CR>
+nnoremap <silent> <Space>u :e<CR>
+" FORCE reload (update) buffer with any changes
+nnoremap <silent> <C-u> :e!<CR>
+" Redo mapping basic capital U to redo since ctrl-r is remapped
+nnoremap <silent> U :redo<CR>
+
+" W - Window
+nnoremap <leader>w :execute "resize " . input("Height: ")<CR>
+
+" Arrow Keys - Buffer Sizes
+nnoremap <leader><UP> :resize +5<CR>
+nnoremap <leader><DOWN> :resize -5<CR>
+nnoremap <leader><LEFT> :vertical resize -5<CR>
+nnoremap <leader><RIGHT> :vertical resize +5<CR>
 
 " Space - Completion (ie 'blank')
 " Trigger autocompletion
