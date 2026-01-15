@@ -378,4 +378,4 @@ nnoremap <leader><RIGHT> :vertical resize +5<CR>
 
 " Space - Completion (ie 'blank')
 " Trigger autocompletion
-imap <c-@> <plug>(asyncomplete_force_refresh)
+imap <C-@> <plug>(asyncomplete_force_refresh)
