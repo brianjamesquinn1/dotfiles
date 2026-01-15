@@ -349,7 +349,7 @@ nnoremap <silent> <C-n> :LspRename<CR>
 
 " P - Project
 " Open file search
-nnoremap <silent> <Space>p :Files<CR>
+nnoremap <silent> <Space>p :GFiles<CR>
 
 " R - References/Restart
 " Restart the LSP server
