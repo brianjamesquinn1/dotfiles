@@ -268,11 +268,35 @@ function! Quickfix_Toggle()
   endif
 endfunction
 
+" Scrolls up without changing the position of the cursor
+function! Scroll_Up()
+    let row = winline()            " cursor's screen row
+    if line('.') > 1               " avoid top-of-file errors
+        execute "normal! k"
+        call winrestview({'topline': line('.') - row + 1})
+    endif
+endfunction
+
+" Scrolls down without changing the position of the cursor
+function! Scroll_Down()
+    let row = winline()            " cursor's screen row
+    if line('.') < line('$')       " avoid bottom-of-file errors
+        execute "normal! j"
+        call winrestview({'topline': line('.') - row + 1})
+    endif
+endfunction
+
+
+nnoremap <C-Up> :call ScrollWindowUp()<CR>
+nnoremap <C-Down> :call ScrollWindowDown()<CR>
+
 " Commands "
 command! -bang -nargs=0 DiffToggle call Diff_Toggle()
 command! -bang -nargs=0 DifflistToggle call Difflist_Toggle()
 command! -bang -nargs=0 GitToggle call Git_Toggle()
 command! -bang -nargs=0 QuickfixToggle call Quickfix_Toggle()
+command! -bang -nargs=0 ScrollUp call Scroll_Up()
+command! -bang -nargs=0 ScrollDown call Scroll_Down()
 command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
 command! HelpTags packloadall | silent! helptags ALL
 
@@ -404,11 +428,14 @@ nnoremap <silent> U :redo<CR>
 " W - Window
 nnoremap <leader>w :execute "resize " . input("Height: ")<CR>
 
-" Arrow Keys - Buffer Sizes
+" Arrow Keys - Movement/Buffer Sizes
 nnoremap <leader><UP> :resize +5<CR>
 nnoremap <leader><DOWN> :resize -5<CR>
 nnoremap <leader><LEFT> :vertical resize -5<CR>
 nnoremap <leader><RIGHT> :vertical resize +5<CR>
+nnoremap <C-Up> :ScrollUp<CR>
+nnoremap <C-Down> :ScrollDown<CR>
+
 
 " Space - Completion (ie 'blank')
 " Trigger autocompletion
