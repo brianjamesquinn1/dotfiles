@@ -204,6 +204,7 @@ let g:lsp_signature_help_enabled = 0
 let g:qf_modifiable = 0
 
 " Functions "
+" Safely closes a diff buffer
 function! Close_Diff()
   if (!&diff && !getbufvar('#', '&diff')) || (bufname('%') !~ '^fugitive:' && bufname('#') !~ '^fugitive:')
     echom "Not in diff view."
@@ -223,6 +224,7 @@ function! Close_Diff()
   endif
 endfunction
 
+" Toggles a diff buffer
 function! Diff_Toggle()
     if &diff
         call Close_Diff()
@@ -232,6 +234,20 @@ function! Diff_Toggle()
     endif
 endfunction
 
+" Toggles a difflist in the quickfix list
+function! Difflist_Toggle()
+  " Check if a quickfix window is open
+  if empty(filter(getwininfo(), 'v:val.quickfix'))
+    " Quickfix not open: run fugitive Git difftool to populate and open it
+    Git difftool --name-only
+    copen
+  else
+    " Quickfix is open: close it
+    cclose
+  endif
+endfunction
+
+" Toggles the fugitive git window
 function! Git_Toggle() abort
   for l:winnr in range(1, winnr('$'))
     if !empty(getwinvar(l:winnr, 'fugitive_status'))
@@ -244,9 +260,19 @@ function! Git_Toggle() abort
   setlocal winfixheight
 endfunction
 
+function! Quickfix_Toggle()
+  if empty(filter(getwininfo(), 'v:val.quickfix'))
+    copen
+  else
+    cclose
+  endif
+endfunction
+
 " Commands "
 command! -bang -nargs=0 DiffToggle call Diff_Toggle()
+command! -bang -nargs=0 DifflistToggle call Difflist_Toggle()
 command! -bang -nargs=0 GitToggle call Git_Toggle()
+command! -bang -nargs=0 QuickfixToggle call Quickfix_Toggle()
 command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
 command! HelpTags packloadall | silent! helptags ALL
 
@@ -290,15 +316,19 @@ nnoremap <silent> <leader>/ :set hlsearch!<CR>
 nnoremap <silent> <leader>d :ALEToggle<CR>
 inoremap <silent> <C-d> <C-\><C-O>:ALEToggle<CR>
 
-" C - Close
-" Closes quickfix window (note not safe to remap for ctrl-C)
-nnoremap <silent> <Space>c :ccl<CR>
+" C - Changes
+" Toggles diff (changes) buffer
+nnoremap <silent> <leader>c :DiffToggle<CR>
+" Opens a changelist in quickfix list
+nnoremap <silent> <Space>c :DifflistToggle<CR>
+" Opens all modified files in diffview in separate tabs
+nnoremap <silent> <Space>C :Git difftool -y<CR>
 
 " D - Diff/Definition
 " Pop up definition
 nnoremap <silent> <leader>d :LspPeekDefinition<CR>
 " Open diff buffer
-nnoremap <silent> <Space>d :DiffToggle<CR>
+nnoremap <silent> <Space>d :LspDefinition<CR>
 " Jump to definition
 nnoremap <silent> <C-d> :LspDefinition<CR>
 
@@ -324,7 +354,7 @@ nnoremap <silent> <C-f> :Rg <C-r><C-w><CR>
 " Toggle gutter diff
 nnoremap <silent> <leader>g :GitGutterToggle<CR>
 inoremap <silent> <C-g> <C-\><C-O>:GitGutterToggle<CR>
-" Open fugitive git status window
+" Toggle fugitive git status window
 nnoremap <silent> <Space>g :GitToggle<CR>
 
 " H - Hover details
@@ -350,6 +380,10 @@ nnoremap <silent> <C-n> :LspRename<CR>
 " P - Project
 " Open file search
 nnoremap <silent> <Space>p :GFiles<CR>
+
+" Q - Quickfix
+" Toggle quickfix window
+nnoremap <silent> <Space>q :QuickfixToggle<CR>
 
 " R - References/Restart
 " Restart the LSP server
