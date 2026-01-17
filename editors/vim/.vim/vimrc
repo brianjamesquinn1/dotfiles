@@ -204,6 +204,16 @@ let g:lsp_signature_help_enabled = 0
 let g:qf_modifiable = 0
 
 " Functions "
+" Close corresponding diff window
+function! Close_Corresponding()
+  for w in range(1, winnr('$'))
+    let b = winbufnr(w)
+    if b != -1 && bufname(b) =~# '^fugitive://'
+      execute w . 'wincmd c'
+    endif
+  endfor
+endfunction
+
 " Safely closes a diff buffer
 function! Close_Diff()
   if (!&diff && !getbufvar('#', '&diff')) || (bufname('%') !~ '^fugitive:' && bufname('#') !~ '^fugitive:')
@@ -291,6 +301,7 @@ nnoremap <C-Up> :call ScrollWindowUp()<CR>
 nnoremap <C-Down> :call ScrollWindowDown()<CR>
 
 " Commands "
+command! -bang -nargs=0 CloseCorresponding call Close_Corresponding()
 command! -bang -nargs=0 DiffToggle call Diff_Toggle()
 command! -bang -nargs=0 DifflistToggle call Difflist_Toggle()
 command! -bang -nargs=0 GitToggle call Git_Toggle()
@@ -394,9 +405,9 @@ nnoremap <silent> <C-i> :LspImplementation<CR>
 
 " N - Next/Name
 " Next item in quickfix list
-nnoremap <silent>]n :cn<CR>
+nnoremap <silent>]n :CloseCorresponding<CR>:cn<CR>
 " Previous item in quickfix list
-nnoremap <silent>[n :cp<CR>
+nnoremap <silent>[n :CloseCorresponding<CR>:cp<CR>
 " Symbol (re)name (lsp identified occurences)
 nnoremap <silent> <leader>n /<C-r><C-w><CR>N :LspRename<CR>
 nnoremap <silent> <C-n> :LspRename<CR>
