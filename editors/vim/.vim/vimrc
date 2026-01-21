@@ -438,6 +438,7 @@ nnoremap <silent> <Space>p :GFiles<CR>
 
 " Q - Quickfix
 " Toggle quickfix window
+nnoremap <silent> <leader>q :QuickfixToggle<CR>
 nnoremap <silent> <Space>q :QuickfixToggle<CR>
 
 " R - References/Restart
