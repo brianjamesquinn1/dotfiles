@@ -341,6 +341,12 @@ command! HelpTags packloadall | silent! helptags ALL
 
 " Quit tab
 cnoreabbrev <expr> qt (getcmdtype() == ':' ? 'tabclose' : 'qt')
+" Write quit tab
+cnoreabbrev <expr> wqt (getcmdtype() == ':' ? 'w \| tabclose' : 'wqt')
+" Tab split
+cnoreabbrev <expr> tsp (getcmdtype() == ':' ? 'tab split' : 'tsp')
+" Tab explorer
+cnoreabbrev <expr> tex (getcmdtype() == ':' ? 'tabedit %:p:h' : 'tex')
 " Open all diff files in split view from provided branch/commit (use for code review)
 cnoreabbrev <expr> PR (getcmdtype() == ':' && getcmdline() ==# 'PR' ? 'Git difftool -y' : 'PR')
 " Lists all changed files in quickfix list
