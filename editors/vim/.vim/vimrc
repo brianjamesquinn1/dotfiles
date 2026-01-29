@@ -21,6 +21,7 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set scrolloff=7
 
 " Mouse "
 set mouse=a
