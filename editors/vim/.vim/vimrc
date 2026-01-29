@@ -293,27 +293,25 @@ function! Quickfix_Toggle()
   endif
 endfunction
 
-" Scrolls up without changing the position of the cursor
-function! Scroll_Up()
-    let row = winline()            " cursor's screen row
-    if line('.') > 1               " avoid top-of-file errors
-        execute "normal! k"
-        call winrestview({'topline': line('.') - row + 1})
+" Scrolls without changing the position of the cursor
+function! Scroll_Relative(direction)
+    let cur_row  = winline()
+    let win_rows = winheight(0)
+    let rel_pos  = cur_row * 1.0 / win_rows
+
+    execute "normal! " . (a:direction > 0 ? "j" : "k")
+
+    let new_row   = winline()
+    let target_row = max([1, float2nr(rel_pos * win_rows)])
+    let delta     = new_row - target_row
+
+    if delta > 0
+        execute "normal! " . delta . "\<C-e>"
+    elseif delta < 0
+        execute "normal! " . (-delta) . "\<C-y>"
     endif
 endfunction
 
-" Scrolls down without changing the position of the cursor
-function! Scroll_Down()
-    let row = winline()            " cursor's screen row
-    if line('.') < line('$')       " avoid bottom-of-file errors
-        execute "normal! j"
-        call winrestview({'topline': line('.') - row + 1})
-    endif
-endfunction
-
-
-nnoremap <C-Up> :call ScrollWindowUp()<CR>
-nnoremap <C-Down> :call ScrollWindowDown()<CR>
 
 " Commands "
 command! -bang -nargs=0 BlameToggle call Blame_Toggle()
@@ -322,8 +320,7 @@ command! -bang -nargs=0 DiffToggle call Diff_Toggle()
 command! -bang -nargs=0 DifflistToggle call Difflist_Toggle()
 command! -bang -nargs=0 GitToggle call Git_Toggle()
 command! -bang -nargs=0 QuickfixToggle call Quickfix_Toggle()
-command! -bang -nargs=0 ScrollUp call Scroll_Up()
-command! -bang -nargs=0 ScrollDown call Scroll_Down()
+command! -bang -nargs=1 ScrollRelative call Scroll_Relative(<f-args>)
 command! -bang -nargs=0 LspRestart call lsp#disable() | call lsp#enable()
 command! HelpTags packloadall | silent! helptags ALL
 
@@ -472,8 +469,8 @@ nnoremap <leader><UP> :resize +5<CR>
 nnoremap <leader><DOWN> :resize -5<CR>
 nnoremap <leader><LEFT> :vertical resize -5<CR>
 nnoremap <leader><RIGHT> :vertical resize +5<CR>
-nnoremap <C-Up> :ScrollUp<CR>
-nnoremap <C-Down> :ScrollDown<CR>
+nnoremap <C-Up> :ScrollRelative -1<CR>
+nnoremap <C-Down> :ScrollRelative 1<CR>
 
 
 " Space - Completion (ie 'blank')
