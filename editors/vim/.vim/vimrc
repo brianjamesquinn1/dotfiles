@@ -380,7 +380,7 @@ nnoremap <silent> <Space>b :BlameToggle<CR>
 nnoremap <silent> <leader>c :DiffToggle<CR>
 " Opens a changelist in quickfix list
 nnoremap <silent> <Space>c :DifflistToggle<CR>
-" Opens all modified files in diffview in separate tabs
+" Opens all modified files in diffview in separate tabs (running 'git add -N .' beforehand will add untracked files to index but not their contents)
 nnoremap <silent> <Space>C :Git difftool -y<CR>
 
 " D - Diff/Definition
