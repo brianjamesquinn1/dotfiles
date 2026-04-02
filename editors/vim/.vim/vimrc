@@ -100,7 +100,6 @@ let g:ale_linters = {
       \    'flow-language-server',
       \  ],
       \  'typescript': [
-      \    'prettier',
       \    'eslint',
       \  ],
       \  'python': [
@@ -127,12 +126,12 @@ let g:ale_fixers = {
       \    'goimports',
       \  ],
       \  'javascript': [
-      \    'prettier',
       \    'eslint',
+      \    'prettier',
       \  ],
       \  'typescript': [
-      \    'prettier',
       \    'eslint',
+      \    'prettier',
       \  ],
       \  'rust': [
       \    'rustfmt',
