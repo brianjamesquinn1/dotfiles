@@ -409,7 +409,7 @@ nnoremap <silent> <leader>/ :set hlsearch!<CR>
 
 " A - Alerts
 " Toggle gutter diagnostics
-nnoremap <silent> <leader>d :ALEToggle<CR>
+nnoremap <silent> <leader>a :ALEToggle<CR>
 inoremap <silent> <C-d> <C-\><C-O>:ALEToggle<CR>
 
 " B - Blame
