@@ -382,7 +382,7 @@ command! HelpTags packloadall | silent! helptags ALL
 " Quit tab
 cnoreabbrev <expr> qt (getcmdtype() == ':' ? 'tabclose' : 'qt')
 " Write quit tab
-cnoreabbrev <expr> wqt (getcmdtype() == ':' ? 'w \| tabclose' : 'wqt')
+cnoreabbrev <expr> wqt (getcmdtype() == ':' ? 'w <bar> tabclose' : 'wqt')
 " Tab split
 cnoreabbrev <expr> tsp (getcmdtype() == ':' ? 'tab split' : 'tsp')
 " Tab explorer
