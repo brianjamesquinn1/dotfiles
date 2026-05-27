@@ -157,3 +157,6 @@
 [submodule "editors/vim/.vim/pack/plugins/start/lightline-gitdiff"]
 	path = editors/vim/.vim/pack/plugins/start/lightline-gitdiff
 	url = git@github.com:niklaas/lightline-gitdiff.git
+[submodule "editors/vim/.vim/pack/plugins/start/vim-go"]
+	path = editors/vim/.vim/pack/plugins/start/vim-go
+	url = git@github.com:fatih/vim-go.git

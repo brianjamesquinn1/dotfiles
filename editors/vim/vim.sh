@@ -15,6 +15,10 @@ brew install ripgrep
 echo "Installing bat"
 brew install bat
 
+# Install Delve (Go debugger used by vim-go's :GoDebug* commands)
+echo "Installing delve"
+brew install delve
+
 # Configure Vim
 echo "Copying vim files"
 # Make sure submodules are pulled before copying
