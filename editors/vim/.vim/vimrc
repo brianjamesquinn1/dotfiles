@@ -103,7 +103,7 @@ let g:ale_linters = {
       \    'eslint',
       \  ],
       \  'python': [
-      \    'pyright',
+      \    'pylsp',
       \  ],
       \  'rust': [
       \    'rustc',
@@ -132,6 +132,10 @@ let g:ale_fixers = {
       \  'typescript': [
       \    'eslint',
       \    'prettier',
+      \  ],
+      \  'python': [
+      \    'isort',
+      \    'black',
       \  ],
       \  'rust': [
       \    'rustfmt',
