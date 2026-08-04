@@ -2,5 +2,6 @@
 brew install --cask flux
 brew install --cask rectangle
 brew install --cask iterm2
+brew install --cask spacejump
 brew install --cask slack
 brew install --cask spotify
