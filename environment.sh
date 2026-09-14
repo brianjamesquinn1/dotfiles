@@ -13,6 +13,9 @@ mkdir -p $WORKSPACE/go
 # Install OSX Apps
 ./appinstall.sh
 
+# Setup AI tools
+./ai.sh
+
 # Setup vim
 cd ./editors/vim
 ./vim.sh

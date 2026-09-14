@@ -13,6 +13,9 @@
    any language you will be working with
 6. Follow instructions at bottom to configure manual settings
 
+### Overview of ai.sh ###
+Sets up agentic programming for configured llms
+
 ### Overview of appinstall.sh ###
 Install flux, rectangle, iterm2, slack, and spotify
 
@@ -20,7 +23,7 @@ Install flux, rectangle, iterm2, slack, and spotify
 Installs general command line tools and configures them
 
 ### Overview of environment.sh ###
-Creates a default workspace and runs the appinstall, packageinstall, and vim shell scripts
+Creates a default workspace and runs the appinstall, packageinstall, ai, and vim shell scripts
 
 ### Overview of generatekeys.sh ###
 Generates SSH and GPG keys which will be output for addition to github.
