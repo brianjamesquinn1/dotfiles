@@ -67,6 +67,13 @@ them. Documentation warrants less, and code comments least of all. Specific cont
 code comment — dates, ticket numbers, incidents, who did what — is both overload and the
 fastest thing to go stale.
 
+## Line comments are inline
+
+Comments that describe a single line of code — a field on a type, an entry in a list, one
+statement — go inline at the end of that line, never on the line above. A comment above
+its line drifts: an insert or a re-sort detaches it from the code it describes. Inline, it
+moves with the line, reads at a glance, and leaves fields free to sort.
+
 ## Do not report editor swap files
 
 Ignore `.swp`, `.swo`, and similar editor artefacts. Do not mention them, warn that they
