@@ -45,8 +45,18 @@ A CLAUDE.md is written for Claude. It is not a context document. Scope it to wha
 Claude do its job efficiently: design patterns, architecture, database design, coding
 conventions, and the like.
 
-Neither should hold unnecessary specific context — identifiers, counts, dates, one-off
-incidents. That kind of detail goes out of date fast.
+Neither holds specific context — identifiers, counts, dates, one-off incidents. That kind
+of detail gets stale fast.
+
+Neither narrates. Documentation states what is true and what is required, not how that was
+learned. A symptom-then-cause-then-fix sequence, an investigation trail, alternatives
+considered, trade-offs weighed: these are a story, and removing the dates and names does not
+turn a story into a requirement. Test each sentence: if it explains why a rule exists or how
+a problem was found, cut it and keep the rule.
+
+The risky moment is the end of a debugging session, when the instinct is to write up what
+was learned. The repo gets the standing requirement in one to three sentences, phrased like
+the requirements around it. Everything else stays in the conversation.
 
 Overlap between the two should be minimal. Where it exists, the overlapping sections must be
 kept in sync: a change to one is a change to both.
@@ -63,9 +73,10 @@ or decide.
 
 How much context is warranted depends on the medium. Conversation and decision-making
 warrant more: the reader is weighing something and needs the relevant facts in front of
-them. Documentation warrants less, and code comments least of all. Specific context in a
-code comment — dates, ticket numbers, incidents, who did what — is both overload and the
-fastest thing to go stale.
+them. Documentation warrants only the current state and the requirements on it; how they
+came to be is conversation, not documentation. Code comments warrant least of all. Specific
+context in a code comment — dates, ticket numbers, incidents, who did what — is both
+overload and the fastest thing to go stale.
 
 ## Line comments are inline
 
