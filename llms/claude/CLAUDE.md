@@ -78,12 +78,25 @@ came to be is conversation, not documentation. Code comments warrant least of al
 context in a code comment — dates, ticket numbers, incidents, who did what — is both
 overload and the fastest thing to go stale.
 
+Design rationale falls under this. A comment arguing for the approach taken, or against
+one rejected, is a transcript of a conversation the reader was not in, and it outlives the
+alternatives that made it interesting. Comment what the code does when that is not
+evident, and what a future edit must not break. Not why the author chose it.
+
 ## Line comments are inline
 
 Comments that describe a single line of code — a field on a type, an entry in a list, one
 statement — go inline at the end of that line, never on the line above. A comment above
 its line drifts: an insert or a re-sort detaches it from the code it describes. Inline, it
 moves with the line, reads at a glance, and leaves fields free to sort.
+
+## No emojis in code
+
+Never put an emoji in code you write: not in identifiers, strings, comments, log messages,
+or anything the program prints. They render inconsistently across fonts, terminals and
+platforms, break column alignment, and add noise to every diff that touches the line. What
+third-party tools emit, and what vendored or generated files already contain, is theirs:
+leave it rather than filtering it out.
 
 ## Do not report editor swap files
 
